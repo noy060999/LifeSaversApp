@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,18 @@
 		21240C2524B485AD00A24390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21240C2324B485AD00A24390 /* Main.storyboard */; };
 		21240C2724B485B100A24390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21240C2624B485B100A24390 /* Assets.xcassets */; };
 		21240C2A24B485B100A24390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21240C2824B485B100A24390 /* LaunchScreen.storyboard */; };
+		21240C3A24B4A95200A24390 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C3924B4A95200A24390 /* SignInViewController.swift */; };
+		21240C3C24B4A96700A24390 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C3B24B4A96700A24390 /* SignUpViewController.swift */; };
+		21240C4024B4A99000A24390 /* QuastianireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C3F24B4A99000A24390 /* QuastianireViewController.swift */; };
+		21240C4224B4AE0100A24390 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4124B4AE0100A24390 /* HomeViewController.swift */; };
+		21240C4424B4B27800A24390 /* ActivePositionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */; };
+		21240C4624B4B29100A24390 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4524B4B29100A24390 /* MyProfileViewController.swift */; };
+		21240C4824B4BCD200A24390 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4724B4BCD200A24390 /* User.swift */; };
+		21240C4C24B4D85B00A24390 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21240C4B24B4D85B00A24390 /* GoogleService-Info.plist */; };
+		21240C5024B4DDA700A24390 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21240C4F24B4DDA700A24390 /* Default-568h@2x.png */; };
+		217DB36C24B8F28F00E9751D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DB36B24B8F28F00E9751D /* Location.swift */; };
+		21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F93B7124B79DFF00BC5F47 /* Const.swift */; };
+		B769B125AB95F1C3C71B3B93 /* Pods_LifeSavers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +35,21 @@
 		21240C2424B485AD00A24390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21240C2624B485B100A24390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21240C2924B485B100A24390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		21240C2B24B485B100A24390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21240C3924B4A95200A24390 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		21240C3B24B4A96700A24390 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		21240C3F24B4A99000A24390 /* QuastianireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuastianireViewController.swift; sourceTree = "<group>"; };
+		21240C4124B4AE0100A24390 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePositionsViewController.swift; sourceTree = "<group>"; };
+		21240C4524B4B29100A24390 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		21240C4724B4BCD200A24390 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		21240C4B24B4D85B00A24390 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21240C4D24B4DB0700A24390 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../.Trash/Info.plist; sourceTree = "<group>"; };
+		21240C4F24B4DDA700A24390 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		217DB36B24B8F28F00E9751D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		21F93B7124B79DFF00BC5F47 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSavers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1502CC200DEC5190A156C6B /* Pods-LifeSavers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.release.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.release.xcconfig"; sourceTree = "<group>"; };
+		E0B02704F88013AE080C938E /* Pods-LifeSavers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.debug.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B769B125AB95F1C3C71B3B93 /* Pods_LifeSavers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +67,11 @@
 		21240C1124B485AD00A24390 = {
 			isa = PBXGroup;
 			children = (
+				21240C4F24B4DDA700A24390 /* Default-568h@2x.png */,
 				21240C1C24B485AD00A24390 /* LifeSavers */,
 				21240C1B24B485AD00A24390 /* Products */,
+				6E2C29157C266F7CAA336FD3 /* Pods */,
+				CE2AEB83AD3032B340C0EF82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +86,58 @@
 		21240C1C24B485AD00A24390 /* LifeSavers */ = {
 			isa = PBXGroup;
 			children = (
+				21F93B7424B7C8A700BC5F47 /* Helpers */,
+				21F93B7324B7C88C00BC5F47 /* View Controllers */,
 				21240C1D24B485AD00A24390 /* AppDelegate.swift */,
 				21240C1F24B485AD00A24390 /* SceneDelegate.swift */,
-				21240C2124B485AD00A24390 /* ViewController.swift */,
 				21240C2324B485AD00A24390 /* Main.storyboard */,
+				21240C4D24B4DB0700A24390 /* Info.plist */,
+				21240C4B24B4D85B00A24390 /* GoogleService-Info.plist */,
 				21240C2624B485B100A24390 /* Assets.xcassets */,
 				21240C2824B485B100A24390 /* LaunchScreen.storyboard */,
-				21240C2B24B485B100A24390 /* Info.plist */,
 			);
 			path = LifeSavers;
+			sourceTree = "<group>";
+		};
+		21F93B7324B7C88C00BC5F47 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21240C2124B485AD00A24390 /* ViewController.swift */,
+				21240C3924B4A95200A24390 /* SignInViewController.swift */,
+				21240C3B24B4A96700A24390 /* SignUpViewController.swift */,
+				21240C3F24B4A99000A24390 /* QuastianireViewController.swift */,
+				21240C4124B4AE0100A24390 /* HomeViewController.swift */,
+				21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */,
+				21240C4524B4B29100A24390 /* MyProfileViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		21F93B7424B7C8A700BC5F47 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				21240C4724B4BCD200A24390 /* User.swift */,
+				21F93B7124B79DFF00BC5F47 /* Const.swift */,
+				217DB36B24B8F28F00E9751D /* Location.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6E2C29157C266F7CAA336FD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0B02704F88013AE080C938E /* Pods-LifeSavers.debug.xcconfig */,
+				A1502CC200DEC5190A156C6B /* Pods-LifeSavers.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE2AEB83AD3032B340C0EF82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21240C2E24B485B100A24390 /* Build configuration list for PBXNativeTarget "LifeSavers" */;
 			buildPhases = (
+				F16DA876FDD74D7EF146B171 /* [CP] Check Pods Manifest.lock */,
 				21240C1624B485AD00A24390 /* Sources */,
 				21240C1724B485AD00A24390 /* Frameworks */,
 				21240C1824B485AD00A24390 /* Resources */,
+				9A1DEAB1D2EA402AED28FAAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,21 +201,74 @@
 			buildActionMask = 2147483647;
 			files = (
 				21240C2A24B485B100A24390 /* LaunchScreen.storyboard in Resources */,
+				21240C4C24B4D85B00A24390 /* GoogleService-Info.plist in Resources */,
 				21240C2724B485B100A24390 /* Assets.xcassets in Resources */,
 				21240C2524B485AD00A24390 /* Main.storyboard in Resources */,
+				21240C5024B4DDA700A24390 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A1DEAB1D2EA402AED28FAAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeSavers/Pods-LifeSavers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeSavers/Pods-LifeSavers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeSavers/Pods-LifeSavers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16DA876FDD74D7EF146B171 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeSavers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21240C1624B485AD00A24390 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21240C3A24B4A95200A24390 /* SignInViewController.swift in Sources */,
+				21240C4424B4B27800A24390 /* ActivePositionsViewController.swift in Sources */,
 				21240C2224B485AD00A24390 /* ViewController.swift in Sources */,
+				21240C4624B4B29100A24390 /* MyProfileViewController.swift in Sources */,
+				21240C4024B4A99000A24390 /* QuastianireViewController.swift in Sources */,
 				21240C1E24B485AD00A24390 /* AppDelegate.swift in Sources */,
 				21240C2024B485AD00A24390 /* SceneDelegate.swift in Sources */,
+				21240C4224B4AE0100A24390 /* HomeViewController.swift in Sources */,
+				21240C4824B4BCD200A24390 /* User.swift in Sources */,
+				21240C3C24B4A96700A24390 /* SignUpViewController.swift in Sources */,
+				217DB36C24B8F28F00E9751D /* Location.swift in Sources */,
+				21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,10 +410,12 @@
 		};
 		21240C2F24B485B100A24390 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B02704F88013AE080C938E /* Pods-LifeSavers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LifeSavers/Info.plist;
+				DEVELOPMENT_TEAM = FVR3BFJUHT;
+				INFOPLIST_FILE = "$(SRCROOT)/../../.Trash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,10 +429,12 @@
 		};
 		21240C3024B485B100A24390 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1502CC200DEC5190A156C6B /* Pods-LifeSavers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LifeSavers/Info.plist;
+				DEVELOPMENT_TEAM = FVR3BFJUHT;
+				INFOPLIST_FILE = "$(SRCROOT)/../../.Trash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

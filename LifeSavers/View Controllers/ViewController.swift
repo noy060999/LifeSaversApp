@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var mainVC_signUp_btn: UIButton!
+    
+    @IBOutlet weak var mainVC_signIn_btn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
-
-
 }
 
