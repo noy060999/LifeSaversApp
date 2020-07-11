@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A5E899F2-F956-430E-BA82-88394B0DF936"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "222EF8EB-E3F7-4044-86AA-86BEAF3B0A42"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LifeSavers/View Controllers/ActivePositionsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "addAllPositionsToMap()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "222EF8EB-E3F7-4044-86AA-86BEAF3B0A42 - a22ddc0a217d0e53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LifeSavers.ActivePositionsViewController.addAllPositionsToMap() -&gt; ()"
+                  moduleName = "LifeSavers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user167523/Desktop/LifeSavers/LifeSavers/View%20Controllers/ActivePositionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "442">
+               </Location>
+               <Location
+                  uuid = "222EF8EB-E3F7-4044-86AA-86BEAF3B0A42 - 1dfa8709cb5b5ece"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LifeSavers.ActivePositionsViewController.addAllPositionsToMap() -&gt; ()"
+                  moduleName = "LifeSavers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user167523/Desktop/LifeSavers/LifeSavers/View%20Controllers/ActivePositionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
