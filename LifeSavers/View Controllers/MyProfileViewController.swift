@@ -10,7 +10,8 @@ import UIKit
 import Firebase
 
 class MyProfileViewController: UIViewController {
-
+    
+    //outlets define
     @IBOutlet weak var nameLBL: UILabel!
     @IBOutlet weak var phoneLBL: UILabel!
     @IBOutlet weak var bloodTypeLBL: UILabel!
@@ -19,6 +20,18 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var cityLBL: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     
+    @IBOutlet weak var finishEditBtn: UIButton!
+    @IBOutlet weak var editProfileBtn: UIButton!
+    
+    @IBOutlet weak var errorLbl: UILabel!
+    @IBOutlet weak var nameTxt: UITextField!
+    
+    @IBOutlet weak var idText: UITextField!
+    @IBOutlet weak var bloodTypeTxt: UITextField!
+    @IBOutlet weak var birthdateTxt: UITextField!
+    @IBOutlet weak var cityTxt: UITextField!
+    @IBOutlet weak var phoneTxt: UITextField!
+    //get user parameters from the db by userId
     func getUserParameters(){
         let userAuthID = Auth.auth().currentUser?.uid
         let db = Firestore.firestore()
@@ -32,13 +45,14 @@ class MyProfileViewController: UIViewController {
                     let birthdate = (documentData?["birthDate"])!
                     let defaultCity = (documentData?["defaultCity"])!
                     let bloodType = (documentData?["bloodType"])!
-
-                    self.nameLBL.text = "Name: \(String(describing: name))"
-                    self.phoneLBL.text = "Phone: \(String(describing: phone))"
-                    self.idLBL.text = "ID: \(String(describing: id))"
-                    self.bloodTypeLBL.text = "BloodType: \(String(describing: bloodType))"
-                    self.birthdateLBL.text = "Birth Date: \(String(describing: birthdate))"
-                    self.cityLBL.text = "Default City: \(String(describing: defaultCity))"
+                    
+                    //init textFields
+                    self.nameTxt.text = "\(String(describing: name))"
+                    self.phoneTxt.text = "\(String(describing: phone))"
+                    self.idText.text = "\(String(describing: id))"
+                    self.bloodTypeTxt.text = "\(String(describing: bloodType))"
+                    self.birthdateTxt.text = "\(String(describing: birthdate))"
+                    self.cityTxt.text = "\(String(describing: defaultCity))"
                 }
             }
             else{
@@ -48,14 +62,108 @@ class MyProfileViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        errorLbl.alpha = 0
+        finishEditBtn.alpha = 0
         getUserParameters()
-
-        // Do any additional setup after loading the view.
+        
+        //dismiss keyboard when tapping the screen
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(view.endEditing(_:)))
+        view.addGestureRecognizer(tap)
+        
     }
     
+    
     @IBAction func backClicked(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-       // _ = navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func editProfileClicked(_ sender: Any) {
+        finishEditBtn.alpha = 1
+        editProfileBtn.alpha = 0
+        nameTxt.isEnabled = true
+        idText.isEnabled = true
+        phoneTxt.isEnabled = true
+        bloodTypeTxt.isEnabled = true
+        birthdateTxt.isEnabled = true
+        cityTxt.isEnabled = true
+        
+        //todo take new values from textFields and update in firestore user
+        //todo finish button
+    }
+    
+    
+    @IBAction func finishEditingClicked(_ sender: Any) {
+        let uid = (Auth.auth().currentUser?.uid)!
+        let error = validateFields()
+        if error == nil{
+            errorLbl.alpha = 0
+            let newName = nameTxt.text
+            let newID = idText.text
+            let newPhone = phoneTxt.text
+            let newCity = cityTxt.text
+            let newBloodType = bloodTypeTxt.text
+            let newBirthDate = birthdateTxt.text
+            
+            let db = Firestore.firestore()
+            db.collection("users").document(uid).updateData(["name": newName as Any, "id": newID as Any, "phone": newPhone as Any, "defaultCity": newCity as Any, "bloodType": newBloodType as Any, "birthDate": newBirthDate as Any] )
+            editProfileBtn.alpha = 1
+            finishEditBtn.alpha = 0
+            makeAllTextFieldsDisabled()
 
+        }
+        else{
+            errorLbl.alpha = 1
+            errorLbl.text = error
+        }
+        
+        
+    }
+    
+    func makeAllTextFieldsDisabled(){
+        nameTxt.isEnabled = false
+        idText.isEnabled = false
+        cityTxt.isEnabled = false
+        phoneTxt.isEnabled = false
+        bloodTypeTxt.isEnabled = false
+        birthdateTxt.isEnabled = false
+    }
+    
+    func isBirthdateValid (_ birthdate: String)-> Bool{
+        let birthDateTest = NSPredicate(format: "SELF MATCHES %@", "^(?:(?:(?:0?[13578]|1[02])(\\/|-|\\.)31)\\1|(?:(?:0?[1,3-9]|1[0-2])(\\/|-|\\.)(?:29|30)\\2))(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$|^(?:0?2(\\/|-|\\.)29\\3(?:(?:(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:(?:0?[1-9])|(?:1[0-2]))(\\/|-|\\.)(?:0?[1-9]|1\\d|2[0-8])\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$")
+        return birthDateTest.evaluate(with: birthdate)
+    }
+    //check all fileds are filled properly
+    func validateFields() -> String? {
+        
+        // Check that all fields are filled in
+        if  nameTxt.text == "" ||
+            idText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            cityTxt.text == "" ||
+            phoneTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            bloodTypeTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            birthdateTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            
+            return "Please fill in all fields."
+        }
+        if isBirthdateValid(birthdateTxt.text!) == false{
+            return "Please type birthdate in this format: dd-mm-yyyy"
+        }
+        if idText.text?.count != 9{
+            return "ID must contain 9 digits."
+        }
+        
+        if bloodTypeTxt.text != "A-" && bloodTypeTxt.text != "A+" && bloodTypeTxt.text != "O-" && bloodTypeTxt.text != "O+" && bloodTypeTxt.text != "B-" && bloodTypeTxt.text != "B+" && bloodTypeTxt.text != "AB+" && bloodTypeTxt.text != "AB-" && bloodTypeTxt.text != "don't know" {
+            return "invalid blood type. if you don't know your blood type, please type in : don't know. "
+        }
+    
+        return nil
     }
 }
+
+
+
+
+
+

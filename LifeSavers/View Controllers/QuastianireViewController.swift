@@ -10,7 +10,7 @@ import UIKit
 
 class QuastianireViewController: UIViewController {
     
-    
+    //outlets define
     @IBOutlet weak var ans1SegmentedControl: UISegmentedControl!
     @IBOutlet weak var ans2SegmentedControl: UISegmentedControl!
     @IBOutlet weak var ans3SegmentedControl: UISegmentedControl!
@@ -20,24 +20,23 @@ class QuastianireViewController: UIViewController {
     @IBOutlet weak var ans6SegmentedControl: UISegmentedControl!
     @IBOutlet weak var ans7SegmentedControl: UISegmentedControl!
     @IBOutlet weak var ans8SegmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var backBtn: UIButton!
-    
     @IBOutlet weak var answerLabel: UILabel!
     
+    //all answers
     var answers :[Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //dismiss answerLabel
         answerLabel.alpha = 0
     }
     
     
     @IBAction func backClicked(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-      //  _ = navigationController?.popViewController(animated: true)
-
+        navigationController?.popViewController(animated: true)
+        
     }
     
     
@@ -56,6 +55,7 @@ class QuastianireViewController: UIViewController {
         }
     }
     
+    //check all answers and return the decide
     func decideIfTheUserCanDonateBlood(answers: [Int])->Bool{
         for ans in answers{
             if ans == 1{
@@ -64,6 +64,7 @@ class QuastianireViewController: UIViewController {
         }
         return true
     }
+    
     
     func takeAnswersFromSegmentedControllers()->[Int]{
         let ans1 = ans1SegmentedControl.selectedSegmentIndex

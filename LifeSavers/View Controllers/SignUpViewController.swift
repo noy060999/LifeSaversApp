@@ -11,10 +11,10 @@ import Firebase
 import FirebaseAuth
 
 class SignUpViewController: UIViewController {
+        
+    //outlets define
     @IBOutlet weak var backBtn: UIButton!
-    
     @IBOutlet weak var errorLabel: UILabel!
-    
     @IBOutlet weak var signupVC_email_edt: UITextField!
     @IBOutlet weak var signUpVC_name_edt: UITextField!
     @IBOutlet weak var signUpVC_id_edt: UITextField!
@@ -28,7 +28,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpVC_signUp_btn: UIButton!
     
     
-    var ref: DatabaseReference!
     var userName: String = ""
     var userID: String = ""
     var userPhone: String = ""
@@ -39,23 +38,26 @@ class SignUpViewController: UIViewController {
     var userBirthdateString: String = ""
     var userBloodTypeIndex: Int = 0
     var userBloodType: String = ""
-    var users = [User]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //dismiss keyboard when tapping the screen
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(view.endEditing(_:)))
         view.addGestureRecognizer(tap)
         
-        // Do any additional setup after loading the view.
+        //dismiss errorLabel
         errorLabel.alpha = 0
         
         
     }
+    
+    
+    //get user parameters from text fields
     func getParameters(){
         let df = DateFormatter()
-        df.dateFormat = "yyyy-MM-dd"
+        df.dateFormat = "dd-MM-yyyy"
         userBirthdateString = df.string(from: signUpVC_datePicker.date).trimmingCharacters(in: .whitespacesAndNewlines)
         userName = signUpVC_name_edt.text!
         userID = signUpVC_id_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -68,7 +70,7 @@ class SignUpViewController: UIViewController {
         userEmail = signupVC_email_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
-    
+    //figure blood type from the index that detected by the segmented control
     func checkBloodType(bloodTypeIndex: Int)-> String{
         switch (bloodTypeIndex){
         case 0:
@@ -94,13 +96,11 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    
+    //move to the next VC
     func gotoHome (){
         let homeViewController = storyboard?.instantiateViewController(identifier: Const.Storyboard.homeViewController) as? HomeViewController
-        //navigationController?.pushViewController(homeViewController!, animated: true)
-
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
+        navigationController?.pushViewController(homeViewController!, animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func showError(_ message:String) {
@@ -109,12 +109,19 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
+    //check password validation
     func isPasswordValid(_ password : String) -> Bool {
         
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
     }
     
+    func isEmailValid(_ email: String) -> Bool{
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$")
+        return emailTest.evaluate(with: email)
+    }
+    
+    //check all fileds are filled properly
     func validateFields() -> String? {
         
         // Check that all fields are filled in
@@ -131,13 +138,21 @@ class SignUpViewController: UIViewController {
         
         // Check if the password is secure
         let cleanedPassword = signUpVC_password_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
+        let cleanedEmail = signupVC_email_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if isPasswordValid(cleanedPassword) == false {
             // Password isn't secure enough
             return "Please make sure your password is at least 8 characters, contains a special character and a number."
         }
+        
+        if isEmailValid(cleanedEmail) == false{
+            return "Please type an email in valid format."
+        }
+        if signUpVC_id_edt.text?.count != 9{
+            return "ID must contain 9 digits."
+        }
         return nil
     }
+    
     
     @IBAction func enterHomePageFromSU(_ sender: Any) {
         let error = validateFields()
@@ -171,3 +186,4 @@ class SignUpViewController: UIViewController {
         
     }
 }
+

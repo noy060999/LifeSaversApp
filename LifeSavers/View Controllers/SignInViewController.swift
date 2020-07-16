@@ -12,6 +12,7 @@ import FirebaseAuth
 
 class SignInViewController: UIViewController {
     
+    //outlets define
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -24,10 +25,11 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //to dismiss keyboard when tapping the screen
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(view.endEditing(_:)))
         view.addGestureRecognizer(tap)
         
-        // Do any additional setup after loading the view.
+        //dismiss errorLabel
         errorLabel.alpha = 0
     }
     
@@ -36,6 +38,7 @@ class SignInViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
+    //check all fields are field properly
     func validateFields() -> String? {
         
         // Check that all fields are filled in
@@ -47,16 +50,16 @@ class SignInViewController: UIViewController {
         return nil
     }
     
+    //move to next VC
     func gotoHome (){
         let homeViewController = storyboard?.instantiateViewController(identifier: Const.Storyboard.homeViewController) as? HomeViewController
+        navigationController?.pushViewController(homeViewController!, animated: true)
+        self.dismiss(animated: true, completion: nil)
         
-//        UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
-//        UserDefaults.standard.synchronize()
-//        navigationController?.pushViewController(homeViewController!, animated: true)
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
+        
     }
     
+    //get user parameters from text fields
     func getParameters(){
         userEmail = signInVC_email_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         userPassword = signInVC_password_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)

@@ -13,15 +13,18 @@ import MapKit
 class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     let cellReuseID = "cell"
+    
+    //outlets define
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableViewActivePositions: UITableView!
     @IBOutlet weak var backBtn: UIButton!
+    
+    //all lcoations by strings
     var allLocationsStrings: [String] = []
     var allLocations: [Location] = []
     var isSearching = false
     
-    var defaultCityToZoomIn : String = ""
     var searchValue = [String]()
     var myIndex = 0
     
@@ -43,6 +46,8 @@ class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITab
         makeList()
         
     }
+    
+    //add all the active positions to db
     func setActivePositionsToFireStore(){
         let db = Firestore.firestore()
         let docRefTA1 = db.collection("activePositions").document("Tel-Aviv1")
@@ -65,6 +70,7 @@ class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITab
         docRefAfula.setData(["city":"Afula", "address": "Kehilat Tzion 2", "lat": 32.6079613, "lon": 35.2901985, "startTime": "8:30", "endTime": "13:30"])
     }
     
+    //add annotations to the map
     func addAllPositionsToMap (){
         
         //mapView inits
@@ -99,13 +105,10 @@ class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITab
         }
     }
     
-    func searchPosition () { //TODO finish function
-        
-    }
     
     //table view functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isSearching{
+        if isSearching{ //if the user searched something
             return searchValue.count
         }
         else{
@@ -138,6 +141,7 @@ class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITab
         mapView.centerToLocation(mySelectedLocation)
     }
     
+    //figure the location from the str in the table view
     func findSelectedLocationFromStr(locStr: String) -> CLLocation{
         var tempCllocation = CLLocation(latitude: 0.0, longitude: 0.0)
         for loc in allLocations{
@@ -151,7 +155,7 @@ class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITab
         return tempCllocation
     }
     
-    
+    //make strings list to put in the table view
     func makeList (){
         
         let db = Firestore.firestore()
@@ -164,6 +168,7 @@ class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITab
                 print("error")
             }
             else {
+                //check all documents
                 for document in querySnapshot!.documents {
                     let docData = document.data()
                     let docCity: String = (docData["city"])! as! String
@@ -184,8 +189,7 @@ class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITab
     }
     
     @IBAction func backClicked(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        
+        navigationController?.popViewController(animated: true)
     }
     
 }

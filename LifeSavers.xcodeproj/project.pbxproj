@@ -19,7 +19,6 @@
 		21240C4224B4AE0100A24390 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4124B4AE0100A24390 /* HomeViewController.swift */; };
 		21240C4424B4B27800A24390 /* ActivePositionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */; };
 		21240C4624B4B29100A24390 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4524B4B29100A24390 /* MyProfileViewController.swift */; };
-		21240C4824B4BCD200A24390 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4724B4BCD200A24390 /* User.swift */; };
 		21240C4C24B4D85B00A24390 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21240C4B24B4D85B00A24390 /* GoogleService-Info.plist */; };
 		21240C5024B4DDA700A24390 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21240C4F24B4DDA700A24390 /* Default-568h@2x.png */; };
 		217DB36C24B8F28F00E9751D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DB36B24B8F28F00E9751D /* Location.swift */; };
@@ -41,7 +40,6 @@
 		21240C4124B4AE0100A24390 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePositionsViewController.swift; sourceTree = "<group>"; };
 		21240C4524B4B29100A24390 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
-		21240C4724B4BCD200A24390 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		21240C4B24B4D85B00A24390 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21240C4D24B4DB0700A24390 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../.Trash/Info.plist; sourceTree = "<group>"; };
 		21240C4F24B4DDA700A24390 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 		21F93B7424B7C8A700BC5F47 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				21240C4724B4BCD200A24390 /* User.swift */,
 				21F93B7124B79DFF00BC5F47 /* Const.swift */,
 				217DB36B24B8F28F00E9751D /* Location.swift */,
 			);
@@ -265,7 +262,6 @@
 				21240C1E24B485AD00A24390 /* AppDelegate.swift in Sources */,
 				21240C2024B485AD00A24390 /* SceneDelegate.swift in Sources */,
 				21240C4224B4AE0100A24390 /* HomeViewController.swift in Sources */,
-				21240C4824B4BCD200A24390 /* User.swift in Sources */,
 				21240C3C24B4A96700A24390 /* SignUpViewController.swift in Sources */,
 				217DB36C24B8F28F00E9751D /* Location.swift in Sources */,
 				21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */,

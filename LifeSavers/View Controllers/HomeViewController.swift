@@ -16,7 +16,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeVC_profile_btn: UIButton!
     @IBOutlet weak var homeVC_activePositions_btn: UIButton!
     
-    func setNameFromAuth (){ //copy also to profile VC
+    //set name at helloLabel
+    func setNameFromAuth (){
         let userAuthID = Auth.auth().currentUser?.uid
         let db = Firestore.firestore()
         db.collection("users").document(userAuthID!).getDocument { (document, error) in
@@ -40,22 +41,13 @@ class HomeViewController: UIViewController {
         
     }
     
-    func gotoMainscreen() {
-        let mainViewController = storyboard?.instantiateViewController(identifier: Const.Storyboard.mainViewController) as? ViewController
-        let appDel:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        //appDel.window.rootViewController = mainViewController
-        //view.window?.rootViewController = mainViewController
-
-        //view.window?.makeKeyAndVisible()
-    }
+    
     
     @IBAction func logoutClicked(_ sender: Any) {
         do{
-            //doesn't go over to the main screen (main view controller)
-            navigationController?.popViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
             try Auth.auth().signOut()
-        
+            
         }
         catch{
             print("already logged out")
@@ -64,8 +56,25 @@ class HomeViewController: UIViewController {
     }
     
     
+    @IBAction func activePositionsClicked(_ sender: Any) {
+        let activePositionsVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.activePositionsViewController) as? ActivePositionsViewController
+        navigationController?.pushViewController(activePositionsVC!, animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
     
-
+    @IBAction func fillQClicked(_ sender: Any) {
+        let quastianireVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.quastianireViewController) as? QuastianireViewController
+        navigationController?.pushViewController(quastianireVC!, animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func myProfileClicked(_ sender: Any) {
+        let myProfileVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.myProfileViewController) as? MyProfileViewController
+        navigationController?.pushViewController(myProfileVC!, animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     
     
