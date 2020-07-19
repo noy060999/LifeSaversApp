@@ -89,8 +89,7 @@ class MyProfileViewController: UIViewController {
         birthdateTxt.isEnabled = true
         cityTxt.isEnabled = true
         
-        //todo take new values from textFields and update in firestore user
-        //todo finish button
+        
     }
     
     
@@ -131,7 +130,7 @@ class MyProfileViewController: UIViewController {
     }
     
     func isBirthdateValid (_ birthdate: String)-> Bool{
-        let birthDateTest = NSPredicate(format: "SELF MATCHES %@", "^(?:(?:(?:0?[13578]|1[02])(\\/|-|\\.)31)\\1|(?:(?:0?[1,3-9]|1[0-2])(\\/|-|\\.)(?:29|30)\\2))(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$|^(?:0?2(\\/|-|\\.)29\\3(?:(?:(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:(?:0?[1-9])|(?:1[0-2]))(\\/|-|\\.)(?:0?[1-9]|1\\d|2[0-8])\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$")
+        let birthDateTest = NSPredicate(format: "SELF MATCHES %@", "^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$")
         return birthDateTest.evaluate(with: birthdate)
     }
     //check all fileds are filled properly
@@ -148,7 +147,7 @@ class MyProfileViewController: UIViewController {
             return "Please fill in all fields."
         }
         if isBirthdateValid(birthdateTxt.text!) == false{
-            return "Please type birthdate in this format: dd-mm-yyyy"
+            return "Please type a valid birthdate in this format: dd-mm-yyyy"
         }
         if idText.text?.count != 9{
             return "ID must contain 9 digits."
