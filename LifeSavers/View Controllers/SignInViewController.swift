@@ -16,12 +16,14 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var rememberMeSwitch: UISwitch!
     @IBOutlet weak var signInVC_email_edt: UITextField!
     @IBOutlet weak var signInVC_password_edt: UITextField!
     @IBOutlet weak var signInVC_signIn_btn: UIButton!
-    
+    @IBOutlet weak var forgotPassword_btn: UIButton!
     var userEmail: String = ""
     var userPassword: String = ""
+    var userRememberMe: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +47,7 @@ class SignInViewController: UIViewController {
         if signInVC_email_edt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             signInVC_password_edt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
             
-            return "Please fill in all fields."
+            return "בבקשה מלא את כל השדות"
         }
         return nil
     }
@@ -63,6 +65,32 @@ class SignInViewController: UIViewController {
     func getParameters(){
         userEmail = signInVC_email_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         userPassword = signInVC_password_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        userRememberMe = rememberMeSwitch.isOn
+    }
+    
+    
+    @IBAction func forgotPassword(_ sender: Any) {
+        getParameters()
+        if userEmail == ""{
+            let error = "הכנס אימייל כדי לשלוח קישור לאיפוס סיסמה"
+            showError(error)
+        }
+        else {
+            errorLabel.text = ""
+            Auth.auth().sendPasswordReset(withEmail: userEmail) {(error) in
+                if error != nil{
+                    self.showError(error!.localizedDescription)
+                    print(error!)
+                }
+                else {
+                    let msg = "הקישור לאיפוס הסיסמה נשלח בהצלחה"
+                    self.errorLabel.textColor = UIColor(named: "blue")
+                    self.showError(msg)
+                    print("success sending email")
+                }
+            }
+        }
+        
     }
     
     @IBAction func enterHomePage(_ sender: Any) {
@@ -80,6 +108,18 @@ class SignInViewController: UIViewController {
                     self.showError(error!.localizedDescription)
                 }
                 else {
+                    let userAuthID = Auth.auth().currentUser?.uid
+                    let db = Firestore.firestore()
+                    db.collection("users").document(userAuthID!).getDocument { (document, error) in
+                        if error == nil{
+                            if document != nil && document!.exists{
+                                db.collection("users").document(userAuthID!).updateData(["rememberMe": self.userRememberMe as Any])
+                            }
+                        }
+                        else{
+                            print("error")
+                        }
+                    }
                     self.gotoHome()
                 }
             }

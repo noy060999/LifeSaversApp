@@ -16,6 +16,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeVC_profile_btn: UIButton!
     @IBOutlet weak var homeVC_activePositions_btn: UIButton!
     
+    @IBOutlet weak var homeVC_donationHistory_btn: UIButton!
+    
+    
     //set name at helloLabel
     func setNameFromAuth (){
         let userAuthID = Auth.auth().currentUser?.uid
@@ -24,10 +27,10 @@ class HomeViewController: UIViewController {
             if error == nil{
                 if document != nil && document!.exists{
                     let documentData = document!.data()
-                    let optionalName = documentData?["name"]
+                    let optionalName = documentData?["firstName"]
                     //let optionalPhone = documentData?["phone"]
                     let name = optionalName!
-                    self.homeVC_hello_lbl.text = "Hello \(String(describing: name))!"
+                    self.homeVC_hello_lbl.text = "היי \(String(describing: name))!"
                 }
             }
             else{

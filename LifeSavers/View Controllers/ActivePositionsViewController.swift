@@ -36,7 +36,7 @@ class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITab
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
-        setActivePositionsToFireStore()
+        //setActivePositionsToFireStore()
         mapView.showAnnotations(mapView.annotations, animated: true)
         addAllPositionsToMap()
         
@@ -176,8 +176,9 @@ class ActivePositionsViewController: UIViewController,UITableViewDelegate, UITab
                     let docAddress: String = (docData["address"])! as! String
                     let docStartTime: String = (docData["startTime"])! as! String
                     let docEndTime: String = (docData["endTime"])! as! String
+                    let docDate: String = (docData["date"])! as! String
                     let tempLocation = Location(_location: docLoc, _city: docCity, _address: docAddress, _startTime: docStartTime, _endTime: docEndTime)
-                    tempLocation.locationString = "\(docCity), \(docAddress), start: \(docStartTime), end: \(docEndTime)"
+                    tempLocation.locationString = "\(docCity), \(docAddress), התחלה: \(docDate) \(docStartTime), סיום: \(docEndTime)"
                     tempLocationList.append(tempLocation)
                     tempList.append(tempLocation.locationString)
                 }

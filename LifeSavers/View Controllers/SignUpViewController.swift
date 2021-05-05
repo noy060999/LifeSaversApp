@@ -17,27 +17,31 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var signupVC_email_edt: UITextField!
     @IBOutlet weak var signUpVC_name_edt: UITextField!
+    @IBOutlet weak var signUpVC_familyName_edt: UITextField!
     @IBOutlet weak var signUpVC_id_edt: UITextField!
     @IBOutlet weak var signUpVC_phone_edt: UITextField!
-    @IBOutlet weak var signUpVC_city_edt: UITextField!
     @IBOutlet weak var signUpVC_password_edt: UITextField!
     @IBOutlet weak var signUpVC_birthdate_lbl: UILabel!
     @IBOutlet weak var signUpVC_datePicker: UIDatePicker!
     @IBOutlet weak var signUpVC_bloodType_lbl: UILabel!
     @IBOutlet weak var signUpVC_bloodType_segments: UISegmentedControl!
+    @IBOutlet weak var signUpVC_gender_segments: UISegmentedControl!
     @IBOutlet weak var signUpVC_signUp_btn: UIButton!
     
     
     var userName: String = ""
+    var userFamilyName: String = ""
     var userID: String = ""
     var userPhone: String = ""
     var userPassword: String = ""
-    var userDefaultCity: String = ""
+    var userGenderIndex: Int = 0
+    var userGender: String = ""
     var userEmail: String = ""
     var userBirthdate: Date = Date()
     var userBirthdateString: String = ""
     var userBloodTypeIndex: Int = 0
     var userBloodType: String = ""
+    
     
     
     override func viewDidLoad() {
@@ -60,21 +64,34 @@ class SignUpViewController: UIViewController {
         df.dateFormat = "dd-MM-yyyy"
         userBirthdateString = df.string(from: signUpVC_datePicker.date).trimmingCharacters(in: .whitespacesAndNewlines)
         userName = signUpVC_name_edt.text!
+        userFamilyName = signUpVC_familyName_edt.text!
         userID = signUpVC_id_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         userPhone = signUpVC_phone_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         userPassword = signUpVC_password_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        userDefaultCity = signUpVC_city_edt.text!
         userBloodTypeIndex = signUpVC_bloodType_segments.selectedSegmentIndex
-        
+        userGenderIndex = signUpVC_gender_segments.selectedSegmentIndex
         userBloodType = checkBloodType(bloodTypeIndex: userBloodTypeIndex).trimmingCharacters(in: .whitespacesAndNewlines)
+        userGender = checkGender(genderIndex: userGenderIndex).trimmingCharacters(in: .whitespacesAndNewlines)
         userEmail = signupVC_email_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    func checkGender (genderIndex: Int)-> String{
+        switch (genderIndex){
+        case 0:
+            return "Man"
+        case 1:
+            return "נקבה"
+        default:
+            return "זכר"
+        }
+        
     }
     
     //figure blood type from the index that detected by the segmented control
     func checkBloodType(bloodTypeIndex: Int)-> String{
         switch (bloodTypeIndex){
         case 0:
-            return "don't know"
+            return "לא ידוע"
         case 1:
             return "O-"
         case 2:
@@ -92,7 +109,7 @@ class SignUpViewController: UIViewController {
         case 8:
             return "AB+"
         default:
-            return "don't know"
+            return "לא ידוע"
         }
     }
     
@@ -121,34 +138,45 @@ class SignUpViewController: UIViewController {
         return emailTest.evaluate(with: email)
     }
     
+    func isPhoneValid(_ phone: String) -> Bool{
+        if phone.count != 10{
+            return false
+        }
+        return true
+    }
+    
     //check all fileds are filled properly
     func validateFields() -> String? {
         
         // Check that all fields are filled in
         if signUpVC_name_edt.text == "" ||
+            signUpVC_familyName_edt.text == "" ||
             signUpVC_id_edt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             signUpVC_password_edt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            signUpVC_city_edt.text == "" ||
             signUpVC_phone_edt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             signupVC_email_edt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
             
-            return "Please fill in all fields."
+            return "בבקשה מלאו את כל השדות"
         }
         
         
         // Check if the password is secure
         let cleanedPassword = signUpVC_password_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let cleanedEmail = signupVC_email_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanedPhone = signUpVC_phone_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if isPasswordValid(cleanedPassword) == false {
             // Password isn't secure enough
-            return "Please make sure your password is at least 8 characters, contains a special character and a number."
+            return "סיסמה לא חזקה מספיק. הזינו סיסמה בעלת 8 תווים לפחות הכוללת אות גדולה, אות קטנה וסימן מיוחד"
         }
         
         if isEmailValid(cleanedEmail) == false{
-            return "Please type an email in valid format."
+            return "כתובת מייל לא תקינה"
         }
         if signUpVC_id_edt.text?.count != 9{
-            return "ID must contain 9 digits."
+            return "תעודת זהות לא תקינה"
+        }
+        if isPhoneValid(cleanedPhone) == false {
+            return "מספר הטלפון שהוזן אינו תקין"
         }
         return nil
     }
@@ -166,14 +194,14 @@ class SignUpViewController: UIViewController {
                 if err != nil {
                     
                     // There was an error creating the user
-                    self.showError("Error creating user")
+                    self.showError(String(err!.localizedDescription))
                 }
                 else {
                     
-                    // User was created successfully, now store the first name and last name
+                    // User was created successfully, now store the user details
                     let db = Firestore.firestore()
                     let docRef = db.collection("users").document(Auth.auth().currentUser!.uid)
-                    docRef.setData(["name":self.userName, "id":self.userID,  "phone":self.userPhone, "defaultCity":self.userDefaultCity, "birthDate": self.userBirthdateString,"bloodType": self.userBloodType])
+                    docRef.setData(["firstName":self.userName, "familyName": self.userFamilyName, "id":self.userID,  "phone":self.userPhone, "gender":self.userGender, "birthDate": self.userBirthdateString,"bloodType": self.userBloodType, "rememberMe": true])
                     
                     self.gotoHome()
                 }

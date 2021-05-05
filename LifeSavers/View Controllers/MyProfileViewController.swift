@@ -13,13 +13,15 @@ class MyProfileViewController: UIViewController {
     
     //outlets define
     @IBOutlet weak var nameLBL: UILabel!
+    
+    @IBOutlet weak var familyNameTxt: UITextField!
     @IBOutlet weak var phoneLBL: UILabel!
     @IBOutlet weak var bloodTypeLBL: UILabel!
     @IBOutlet weak var idLBL: UILabel!
     @IBOutlet weak var birthdateLBL: UILabel!
-    @IBOutlet weak var cityLBL: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     
+    @IBOutlet weak var genderTxt: UITextField!
     @IBOutlet weak var finishEditBtn: UIButton!
     @IBOutlet weak var editProfileBtn: UIButton!
     
@@ -29,7 +31,6 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var idText: UITextField!
     @IBOutlet weak var bloodTypeTxt: UITextField!
     @IBOutlet weak var birthdateTxt: UITextField!
-    @IBOutlet weak var cityTxt: UITextField!
     @IBOutlet weak var phoneTxt: UITextField!
     //get user parameters from the db by userId
     func getUserParameters(){
@@ -39,12 +40,13 @@ class MyProfileViewController: UIViewController {
             if error == nil{
                 if document != nil && document!.exists{
                     let documentData = document!.data()
-                    let name = (documentData?["name"])!
+                    let name = (documentData?["firstName"])!
                     let phone = (documentData?["phone"])!
                     let id = (documentData?["id"])!
                     let birthdate = (documentData?["birthDate"])!
-                    let defaultCity = (documentData?["defaultCity"])!
+                    let gender = (documentData?["gender"])!
                     let bloodType = (documentData?["bloodType"])!
+                    let familyName = (documentData?["familyName"])!
                     
                     //init textFields
                     self.nameTxt.text = "\(String(describing: name))"
@@ -52,7 +54,8 @@ class MyProfileViewController: UIViewController {
                     self.idText.text = "\(String(describing: id))"
                     self.bloodTypeTxt.text = "\(String(describing: bloodType))"
                     self.birthdateTxt.text = "\(String(describing: birthdate))"
-                    self.cityTxt.text = "\(String(describing: defaultCity))"
+                    self.genderTxt.text = "\(String(describing: gender))"
+                    self.familyNameTxt.text = "\(String(describing: familyName))"
                 }
             }
             else{
@@ -87,7 +90,8 @@ class MyProfileViewController: UIViewController {
         phoneTxt.isEnabled = true
         bloodTypeTxt.isEnabled = true
         birthdateTxt.isEnabled = true
-        cityTxt.isEnabled = true
+        genderTxt.isEnabled = true
+        familyNameTxt.isEnabled = true
         
         
     }
@@ -101,12 +105,13 @@ class MyProfileViewController: UIViewController {
             let newName = nameTxt.text
             let newID = idText.text
             let newPhone = phoneTxt.text
-            let newCity = cityTxt.text
+            let newGender = genderTxt.text
             let newBloodType = bloodTypeTxt.text
             let newBirthDate = birthdateTxt.text
+            let newFamilyName = familyNameTxt.text
             
             let db = Firestore.firestore()
-            db.collection("users").document(uid).updateData(["name": newName as Any, "id": newID as Any, "phone": newPhone as Any, "defaultCity": newCity as Any, "bloodType": newBloodType as Any, "birthDate": newBirthDate as Any] )
+            db.collection("users").document(uid).updateData(["name": newName as Any, "familyName":newFamilyName as Any, "id": newID as Any, "phone": newPhone as Any, "gender": newGender as Any, "bloodType": newBloodType as Any, "birthDate": newBirthDate as Any] )
             editProfileBtn.alpha = 1
             finishEditBtn.alpha = 0
             makeAllTextFieldsDisabled()
@@ -123,10 +128,11 @@ class MyProfileViewController: UIViewController {
     func makeAllTextFieldsDisabled(){
         nameTxt.isEnabled = false
         idText.isEnabled = false
-        cityTxt.isEnabled = false
+        genderTxt.isEnabled = false
         phoneTxt.isEnabled = false
         bloodTypeTxt.isEnabled = false
         birthdateTxt.isEnabled = false
+        familyNameTxt.isEnabled = false
     }
     
     func isBirthdateValid (_ birthdate: String)-> Bool{
@@ -138,23 +144,24 @@ class MyProfileViewController: UIViewController {
         
         // Check that all fields are filled in
         if  nameTxt.text == "" ||
+            familyNameTxt.text == "" ||
             idText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            cityTxt.text == "" ||
+            genderTxt.text == "" ||
             phoneTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             bloodTypeTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             birthdateTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
-            return "Please fill in all fields."
+            return "בבקשה מלא את כל השדות"
         }
         if isBirthdateValid(birthdateTxt.text!) == false{
-            return "Please type a valid birthdate in this format: dd-mm-yyyy"
+            return "הקלד בבקשה תאריך לידה בפורמט: dd-mm-yyyy"
         }
         if idText.text?.count != 9{
-            return "ID must contain 9 digits."
+            return "מספר תעודת זהות אינו תקין"
         }
         
-        if bloodTypeTxt.text != "A-" && bloodTypeTxt.text != "A+" && bloodTypeTxt.text != "O-" && bloodTypeTxt.text != "O+" && bloodTypeTxt.text != "B-" && bloodTypeTxt.text != "B+" && bloodTypeTxt.text != "AB+" && bloodTypeTxt.text != "AB-" && bloodTypeTxt.text != "don't know" {
-            return "invalid blood type. if you don't know your blood type, please type in : don't know. "
+        if bloodTypeTxt.text != "A-" && bloodTypeTxt.text != "A+" && bloodTypeTxt.text != "O-" && bloodTypeTxt.text != "O+" && bloodTypeTxt.text != "B-" && bloodTypeTxt.text != "B+" && bloodTypeTxt.text != "AB+" && bloodTypeTxt.text != "AB-" && bloodTypeTxt.text != "לא ידוע" {
+            return "סוג דם אינו תקין. אם אינך יודע את סוג הדם שלך, הקלד: לא ידוע"
         }
     
         return nil
