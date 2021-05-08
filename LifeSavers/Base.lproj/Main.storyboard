@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="414-t2-0Gm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="414-t2-0Gm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -378,14 +380,14 @@
                                                 </connections>
                                             </button>
                                             <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vjk-nj-zST">
-                                                <rect key="frame" x="15" y="67" width="384" height="51"/>
+                                                <rect key="frame" x="15" y="67" width="384" height="56"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="eHN-tx-2fs" id="EzK-hh-Cei"/>
                                                 </connections>
                                             </searchBar>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="71b-Cp-LZ9">
-                                                <rect key="frame" x="15" y="138" width="384" height="282"/>
+                                                <rect key="frame" x="15" y="143" width="384" height="282"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="282" id="pcI-kl-u32"/>
@@ -393,7 +395,7 @@
                                                 <color key="separatorColor" systemColor="systemRedColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="tYG-0h-gUb" style="IBUITableViewCellStyleDefault" id="hzp-61-OSt">
-                                                        <rect key="frame" x="0.0" y="24.5" width="384" height="43.5"/>
+                                                        <rect key="frame" x="0.0" y="28" width="384" height="43.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hzp-61-OSt" id="TfH-Zs-JcP">
                                                             <rect key="frame" x="0.0" y="0.0" width="384" height="43.5"/>
@@ -417,7 +419,7 @@
                                                 </connections>
                                             </tableView>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwY-hS-wRA">
-                                                <rect key="frame" x="15" y="440" width="384" height="365"/>
+                                                <rect key="frame" x="15" y="445" width="384" height="360"/>
                                             </mapView>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="25" left="15" bottom="10" right="15"/>
@@ -912,115 +914,119 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="XmF-pg-9cD">
-                                <rect key="frame" x="0.0" y="44" width="414" height="830"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="3ZE-qX-VF1">
+                                <rect key="frame" x="30" y="0.0" width="354" height="668"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="K6Z-jt-Rmv">
-                                        <rect key="frame" x="0.0" y="6" width="413" height="504"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGo-og-VGH">
+                                        <rect key="frame" x="8" y="44" width="338" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="   התנתק" image="person.crop.circle.fill.badge.minus" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logoutClicked:" destination="H24-1f-gPl" eventType="touchUpInside" id="l4y-ch-5gX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="היי שם משתמש !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivp-uj-5m5">
+                                        <rect key="frame" x="8" y="151" width="338" height="49"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="moJ-gj-Mgp" userLabel="Stack1">
+                                        <rect key="frame" x="8" y="280" width="338" height="150"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHF-2p-e7k">
-                                                <rect key="frame" x="8" y="0.0" width="397" height="49"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="   התנתק" image="person.crop.circle.fill.badge.minus" catalog="system">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="N1A-TR-6f0">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="fZX-RO-Q3d"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <color key="tintColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="מילוי שאלון">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                    <imageReference key="image" image="pencil.circle.fill" catalog="system" symbolScale="large"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="logoutClicked:" destination="H24-1f-gPl" eventType="touchUpInside" id="SOq-6V-6jC"/>
+                                                    <action selector="fillQClicked:" destination="H24-1f-gPl" eventType="touchUpInside" id="2Au-Ld-DbG"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="היי שם משתמש !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDN-Ee-RPr">
-                                                <rect key="frame" x="8" y="149" width="397" height="49"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="N4z-ft-INu" userLabel="Stack1">
-                                                <rect key="frame" x="8" y="298" width="397" height="49"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBy-1a-jLW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="188.5" height="49"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                        <state key="normal" title="מילוי שאלון">
-                                                            <color key="titleColor" systemColor="systemRedColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="fillQClicked:" destination="H24-1f-gPl" eventType="touchUpInside" id="FOP-kp-tL5"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ucq-9g-Ryb">
-                                                        <rect key="frame" x="208.5" y="0.0" width="188.5" height="49"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="הפרופיל שלי" image="person.circle.fill" catalog="system">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="myProfileClicked:" destination="H24-1f-gPl" eventType="touchUpInside" id="m5L-oE-xcw"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3VC-io-VSP" userLabel="Stack 2">
-                                                <rect key="frame" x="8" y="447" width="397" height="49"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuH-kz-FMA" userLabel="HomeVC donationhistory">
-                                                        <rect key="frame" x="0.0" y="0.0" width="209" height="49"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="25"/>
-                                                        <state key="normal" title="היסטוריית תרומות">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-Fi-cV1">
-                                                        <rect key="frame" x="229" y="0.0" width="168" height="49"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                        <state key="normal" title="עמדות תרומת דם">
-                                                            <color key="titleColor" systemColor="systemRedColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="activePositionsClicked:" destination="H24-1f-gPl" eventType="touchUpInside" id="WrW-WU-fwa"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-hy-BXw">
+                                                <rect key="frame" x="188" y="0.0" width="150" height="150"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="LQn-bC-YQV"/>
+                                                    <constraint firstAttribute="width" secondItem="GPM-hy-BXw" secondAttribute="height" multiplier="1:1" id="gPp-1B-wWp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="הפרופיל שלי">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="myProfileClicked:" destination="H24-1f-gPl" eventType="touchUpInside" id="HZT-Iv-bWM"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rxe-o6-cRc" userLabel="Stack 2">
+                                        <rect key="frame" x="8" y="510" width="338" height="150"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRH-kx-FWT" userLabel="HomeVC donationhistory">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fRH-kx-FWT" secondAttribute="height" multiplier="1:1" id="2et-Uk-C7y"/>
+                                                    <constraint firstAttribute="width" constant="150" id="ZMc-A4-PIr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="היסטוריית תרומות">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="image" image="folder.fill" catalog="system" symbolScale="large"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xNH-OV-VX4">
+                                                <rect key="frame" x="188" y="0.0" width="150" height="150"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="2sS-iL-Y8l"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <color key="tintColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="עמדות תרומת דם">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                    <imageReference key="image" image="doc.text.fill" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="activePositionsClicked:" destination="H24-1f-gPl" eventType="touchUpInside" id="L25-55-1Wd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="K6Z-jt-Rmv" firstAttribute="width" secondItem="XmF-pg-9cD" secondAttribute="width" multiplier="0.997585" id="C5r-oQ-Xjb"/>
-                                    <constraint firstAttribute="trailing" secondItem="K6Z-jt-Rmv" secondAttribute="trailing" constant="144.5" id="IeP-So-Hag"/>
-                                    <constraint firstItem="K6Z-jt-Rmv" firstAttribute="leading" secondItem="XmF-pg-9cD" secondAttribute="leading" id="Qv5-82-7kv"/>
-                                    <constraint firstItem="K6Z-jt-Rmv" firstAttribute="leading" secondItem="XmF-pg-9cD" secondAttribute="leading" id="X4O-8n-ZQR"/>
-                                    <constraint firstAttribute="bottom" secondItem="K6Z-jt-Rmv" secondAttribute="bottom" constant="460.5" id="pX4-CX-Pw8"/>
-                                    <constraint firstItem="K6Z-jt-Rmv" firstAttribute="top" secondItem="XmF-pg-9cD" secondAttribute="top" constant="6" id="wMD-Ys-1b2"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="jcv-sK-PoJ"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="9cq-1P-XNY"/>
-                            </scrollView>
+                                <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K4b-if-Ktl"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XmF-pg-9cD" firstAttribute="bottom" secondItem="K4b-if-Ktl" secondAttribute="bottom" constant="12" id="QEn-V2-Qv7"/>
-                            <constraint firstItem="XmF-pg-9cD" firstAttribute="top" secondItem="K4b-if-Ktl" secondAttribute="top" id="jlt-83-Pco"/>
-                            <constraint firstItem="K4b-if-Ktl" firstAttribute="trailing" secondItem="XmF-pg-9cD" secondAttribute="trailing" id="li7-bC-1Yf"/>
-                            <constraint firstItem="XmF-pg-9cD" firstAttribute="leading" secondItem="K4b-if-Ktl" secondAttribute="leading" id="oWH-iZ-K5H"/>
-                            <constraint firstItem="XmF-pg-9cD" firstAttribute="leading" secondItem="K4b-if-Ktl" secondAttribute="leading" id="z7N-ab-Hc6"/>
+                            <constraint firstItem="3ZE-qX-VF1" firstAttribute="trailing" secondItem="K4b-if-Ktl" secondAttribute="trailing" constant="-30" id="2j4-7I-Txd"/>
+                            <constraint firstItem="3ZE-qX-VF1" firstAttribute="top" secondItem="K4b-if-Ktl" secondAttribute="top" constant="-44" id="tUv-Tx-atV"/>
+                            <constraint firstItem="3ZE-qX-VF1" firstAttribute="leading" secondItem="K4b-if-Ktl" secondAttribute="leading" constant="30" id="zxg-bk-SoY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bvl-di-Gyo"/>
                     <connections>
-                        <outlet property="homeVC_activePositions_btn" destination="DvT-Fi-cV1" id="fHr-8U-f9L"/>
-                        <outlet property="homeVC_donationHistory_btn" destination="wuH-kz-FMA" id="Fcs-Yq-Gd5"/>
-                        <outlet property="homeVC_fillQ_btn" destination="VBy-1a-jLW" id="MmJ-UF-59m"/>
-                        <outlet property="homeVC_hello_lbl" destination="dDN-Ee-RPr" id="jSC-AM-WvO"/>
-                        <outlet property="homeVC_profile_btn" destination="Ucq-9g-Ryb" id="fUD-vg-w3P"/>
-                        <outlet property="logoutBtn" destination="hHF-2p-e7k" id="SM2-zA-ICT"/>
+                        <outlet property="homeVC_activePositions_btn" destination="xNH-OV-VX4" id="g9e-Ki-MhS"/>
+                        <outlet property="homeVC_donationHistory_btn" destination="fRH-kx-FWT" id="XeE-Kc-e3h"/>
+                        <outlet property="homeVC_fillQ_btn" destination="N1A-TR-6f0" id="LVr-Hd-5Hm"/>
+                        <outlet property="homeVC_hello_lbl" destination="ivp-uj-5m5" id="I11-ZJ-mYd"/>
+                        <outlet property="homeVC_profile_btn" destination="GPM-hy-BXw" id="q80-ka-eqM"/>
+                        <outlet property="logoutBtn" destination="MGo-og-VGH" id="CD9-l9-a9y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5U-OO-oTN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1047,7 +1053,10 @@
     </scenes>
     <resources>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="logo" width="1045" height="532"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.fill.badge.minus" catalog="system" width="128" height="113"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
@@ -1056,6 +1065,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

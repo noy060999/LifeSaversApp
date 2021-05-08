@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeVC_fillQ_btn: UIButton!
     @IBOutlet weak var homeVC_profile_btn: UIButton!
     @IBOutlet weak var homeVC_activePositions_btn: UIButton!
-    
     @IBOutlet weak var homeVC_donationHistory_btn: UIButton!
     
     
