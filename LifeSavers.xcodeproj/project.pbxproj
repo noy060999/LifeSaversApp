@@ -24,6 +24,7 @@
 		217DB36C24B8F28F00E9751D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DB36B24B8F28F00E9751D /* Location.swift */; };
 		21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F93B7124B79DFF00BC5F47 /* Const.swift */; };
 		B769B125AB95F1C3C71B3B93 /* Pods_LifeSavers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */; };
+		C017CDA22646B43000325847 /* PopUpWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017CDA12646B43000325847 /* PopUpWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		21F93B7124B79DFF00BC5F47 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSavers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1502CC200DEC5190A156C6B /* Pods-LifeSavers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.release.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.release.xcconfig"; sourceTree = "<group>"; };
+		C017CDA12646B43000325847 /* PopUpWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpWindow.swift; sourceTree = "<group>"; };
 		C089348E26428A3400599A2C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0B02704F88013AE080C938E /* Pods-LifeSavers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.debug.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				21240C4124B4AE0100A24390 /* HomeViewController.swift */,
 				21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */,
 				21240C4524B4B29100A24390 /* MyProfileViewController.swift */,
+				C017CDA12646B43000325847 /* PopUpWindow.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				21240C4424B4B27800A24390 /* ActivePositionsViewController.swift in Sources */,
 				21240C2224B485AD00A24390 /* ViewController.swift in Sources */,
 				21240C4624B4B29100A24390 /* MyProfileViewController.swift in Sources */,
+				C017CDA22646B43000325847 /* PopUpWindow.swift in Sources */,
 				21240C4024B4A99000A24390 /* QuastianireViewController.swift in Sources */,
 				21240C1E24B485AD00A24390 /* AppDelegate.swift in Sources */,
 				21240C2024B485AD00A24390 /* SceneDelegate.swift in Sources */,
