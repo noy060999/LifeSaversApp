@@ -17,5 +17,10 @@ struct Const {
         static let activePositionsViewController = "activePositionsVC"
         static let myProfileViewController = "myProfileVC"
         static let mainViewController = "mainVC"
+        static let quastianireViewController2 = "quastianireVC2"
+        static let quastianireViewController3 = "quastianireVC3"
+        static let quastianireViewController4 = "quastianireVC4"
+
+
     }
 }

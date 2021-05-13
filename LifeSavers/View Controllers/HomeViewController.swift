@@ -65,7 +65,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func fillQClicked(_ sender: Any) {
-        let quastianireVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.quastianireViewController) as? QuastianireViewController
+        let quastianireVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.quastianireViewController) as? QuastianireViewController1
         navigationController?.pushViewController(quastianireVC!, animated: true)
         self.dismiss(animated: true, completion: nil)
     }

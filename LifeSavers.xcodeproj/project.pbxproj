@@ -15,7 +15,7 @@
 		21240C2A24B485B100A24390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21240C2824B485B100A24390 /* LaunchScreen.storyboard */; };
 		21240C3A24B4A95200A24390 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C3924B4A95200A24390 /* SignInViewController.swift */; };
 		21240C3C24B4A96700A24390 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C3B24B4A96700A24390 /* SignUpViewController.swift */; };
-		21240C4024B4A99000A24390 /* QuastianireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C3F24B4A99000A24390 /* QuastianireViewController.swift */; };
+		21240C4024B4A99000A24390 /* QuastianireViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C3F24B4A99000A24390 /* QuastianireViewController1.swift */; };
 		21240C4224B4AE0100A24390 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4124B4AE0100A24390 /* HomeViewController.swift */; };
 		21240C4424B4B27800A24390 /* ActivePositionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */; };
 		21240C4624B4B29100A24390 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21240C4524B4B29100A24390 /* MyProfileViewController.swift */; };
@@ -25,6 +25,9 @@
 		21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F93B7124B79DFF00BC5F47 /* Const.swift */; };
 		B769B125AB95F1C3C71B3B93 /* Pods_LifeSavers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */; };
 		C017CDA22646B43000325847 /* PopupWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017CDA12646B43000325847 /* PopupWindow.swift */; };
+		C0AE8910264D44C700774DA3 /* QuastianireViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */; };
+		C0AE8912264D503D00774DA3 /* QusatianireViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */; };
+		C0AE8914264D5D8400774DA3 /* QusatianireViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +40,7 @@
 		21240C2924B485B100A24390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21240C3924B4A95200A24390 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		21240C3B24B4A96700A24390 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		21240C3F24B4A99000A24390 /* QuastianireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuastianireViewController.swift; sourceTree = "<group>"; };
+		21240C3F24B4A99000A24390 /* QuastianireViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuastianireViewController1.swift; sourceTree = "<group>"; };
 		21240C4124B4AE0100A24390 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePositionsViewController.swift; sourceTree = "<group>"; };
 		21240C4524B4B29100A24390 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		A1502CC200DEC5190A156C6B /* Pods-LifeSavers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.release.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.release.xcconfig"; sourceTree = "<group>"; };
 		C017CDA12646B43000325847 /* PopupWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupWindow.swift; sourceTree = "<group>"; };
 		C089348E26428A3400599A2C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuastianireViewController2.swift; sourceTree = "<group>"; };
+		C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QusatianireViewController3.swift; sourceTree = "<group>"; };
+		C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QusatianireViewController4.swift; sourceTree = "<group>"; };
 		E0B02704F88013AE080C938E /* Pods-LifeSavers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.debug.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,11 +111,14 @@
 				21240C2124B485AD00A24390 /* ViewController.swift */,
 				21240C3924B4A95200A24390 /* SignInViewController.swift */,
 				21240C3B24B4A96700A24390 /* SignUpViewController.swift */,
-				21240C3F24B4A99000A24390 /* QuastianireViewController.swift */,
+				21240C3F24B4A99000A24390 /* QuastianireViewController1.swift */,
 				21240C4124B4AE0100A24390 /* HomeViewController.swift */,
 				21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */,
 				21240C4524B4B29100A24390 /* MyProfileViewController.swift */,
 				C017CDA12646B43000325847 /* PopupWindow.swift */,
+				C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */,
+				C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */,
+				C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -262,12 +271,15 @@
 				21240C2224B485AD00A24390 /* ViewController.swift in Sources */,
 				21240C4624B4B29100A24390 /* MyProfileViewController.swift in Sources */,
 				C017CDA22646B43000325847 /* PopupWindow.swift in Sources */,
-				21240C4024B4A99000A24390 /* QuastianireViewController.swift in Sources */,
+				21240C4024B4A99000A24390 /* QuastianireViewController1.swift in Sources */,
 				21240C1E24B485AD00A24390 /* AppDelegate.swift in Sources */,
+				C0AE8910264D44C700774DA3 /* QuastianireViewController2.swift in Sources */,
 				21240C2024B485AD00A24390 /* SceneDelegate.swift in Sources */,
+				C0AE8914264D5D8400774DA3 /* QusatianireViewController4.swift in Sources */,
 				21240C4224B4AE0100A24390 /* HomeViewController.swift in Sources */,
 				21240C3C24B4A96700A24390 /* SignUpViewController.swift in Sources */,
 				217DB36C24B8F28F00E9751D /* Location.swift in Sources */,
+				C0AE8912264D503D00774DA3 /* QusatianireViewController3.swift in Sources */,
 				21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
