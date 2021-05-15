@@ -15,12 +15,9 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var nameLBL: UILabel!
     
     @IBOutlet weak var familyNameTxt: UITextField!
-    @IBOutlet weak var phoneLBL: UILabel!
-    @IBOutlet weak var bloodTypeLBL: UILabel!
-    @IBOutlet weak var idLBL: UILabel!
-    @IBOutlet weak var birthdateLBL: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     
+    @IBOutlet weak var addDonationBtn: UIButton!
     @IBOutlet weak var genderTxt: UITextField!
     @IBOutlet weak var finishEditBtn: UIButton!
     @IBOutlet weak var editProfileBtn: UIButton!
@@ -82,6 +79,7 @@ class MyProfileViewController: UIViewController {
     }
     
     
+    
     @IBAction func editProfileClicked(_ sender: Any) {
         finishEditBtn.alpha = 1
         editProfileBtn.alpha = 0
@@ -97,6 +95,8 @@ class MyProfileViewController: UIViewController {
     }
     
     
+    @IBAction func addDonationAction(_ sender: Any) {
+    }
     @IBAction func finishEditingClicked(_ sender: Any) {
         let uid = (Auth.auth().currentUser?.uid)!
         let error = validateFields()
