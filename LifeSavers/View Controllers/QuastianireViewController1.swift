@@ -70,10 +70,20 @@ class QuastianireViewController1: UIViewController {
     
     @IBAction func goToPage2Action(_ sender: Any) {
         let err = getUserInformationFromVC()
+        var popUpWindow: PopUpWindow!
         if (err != ""){
-            showErr(msg: err)
+            if (err == "invalid age"){
+                popUpWindow = PopUpWindow(title: "הודעה לתורם", text: "לצערנו, אינך יכול לתרום דם כרגע.", buttontext: "אישור")
+                self.present(popUpWindow, animated: true, completion: nil)
+            }
+            if (err == "weight too low"){
+                popUpWindow = PopUpWindow(title: "הודעה לתורם", text: "לצערנו, אינך יכול לתרום דם כרגע.", buttontext: "אישור")
+                self.present(popUpWindow, animated: true, completion: nil)
+            }else {
+                showErr(msg: err)
+            }
         }
-        else {
+        else if (err == ""){
             errLbl.alpha = 0
             let quastianirePage2VC = storyboard?.instantiateViewController(identifier: Const.Storyboard.quastianireViewController2) as? QusatianireViewController2
             navigationController?.pushViewController(quastianirePage2VC!, animated: true)
@@ -180,42 +190,39 @@ class QuastianireViewController1: UIViewController {
         _ = reminedToDonate_segmented_q.selectedSegmentIndex
         _ = agreementToSearching_segmented_q.selectedSegmentIndex
         
-        if (address == "" || city == "" || postcode == "" || homePhone == ""
-                || birthCountry == "" || momBirth == "" || dadBirth == "" || weight == "") {
-            return "מלא את כל שדות החובה"
-        }
+        
         let floatWeight = (weight! as NSString).floatValue
         let intAge = (age! as NSString).intValue
         if (floatWeight < 50.0){
-            return "לא ניתן לתרום דם במשקל נמוך מ-50 ק״ג"
+            showErr(msg: "לא ניתן לתרום דם במשקל נמוך מ-50 ק״ג")
+            return "weight too low"
         }
         if (intAge < 17 || intAge > 60){
-            return "ניתן לתרום דם מגיל 17-60 בלבד"
+            showErr(msg: "ניתן לתרום דם מגיל 17-60 בלבד")
+            return "invalid age"
+        }
+        if (address == "" || city == "" || postcode == "" ||
+                birthCountry == "" || momBirth == "" || dadBirth == "" || weight == "") {
+            return "מלא את כל שדות החובה"
+        }
+        if (homePhone != ""){
+            if (validateHomePhone(homePhone: homePhone!) == false){
+                homePhone_q.textColor = UIColor.red
+                homePhone_q.text = "בבקשה הזן מספר טלפון תקין (ללא -)"
+                return "בבקשה הזן מספר טלפון תקין (ללא -)"
+            }
         }
         
         return ""
     }
     
-    //func takeAnswersFromSegmentedControllers()->[Int]{
-        /*let ans1 = ans1SegmentedControl.selectedSegmentIndex
-        let ans2 = ans2SegmentedControl.selectedSegmentIndex
-        let ans3 = ans3SegmentedControl.selectedSegmentIndex
-        let ans4 = ans4SegmentedControl.selectedSegmentIndex
-        let ans5 = ans5SegmentedControl.selectedSegmentIndex
-        let ans6 = ans6SegmentedControl.selectedSegmentIndex
-        let ans7 = ans7SegmentedControl.selectedSegmentIndex
-        let ans8 = ans8SegmentedControl.selectedSegmentIndex
-        
-        var ansArray = [Int]()
-        ansArray.append(ans1)
-        ansArray.append(ans2)
-        ansArray.append(ans3)
-        ansArray.append(ans4)
-        ansArray.append(ans5)
-        ansArray.append(ans6)
-        ansArray.append(ans7)
-        ansArray.append(ans8)
-        return ansArray*/
-    //}
+    func validateHomePhone(homePhone : String) -> Bool {
+        if (homePhone.count != 9){
+            return false;
+        }
+        return true
+    }
+    
+    
     
 }

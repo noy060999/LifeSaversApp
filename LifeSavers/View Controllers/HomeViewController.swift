@@ -61,20 +61,20 @@ class HomeViewController: UIViewController {
     @IBAction func activePositionsClicked(_ sender: Any) {
         let activePositionsVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.activePositionsViewController) as? ActivePositionsViewController
         navigationController?.pushViewController(activePositionsVC!, animated: true)
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func fillQClicked(_ sender: Any) {
         let quastianireVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.quastianireViewController) as? QuastianireViewController1
         navigationController?.pushViewController(quastianireVC!, animated: true)
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func myProfileClicked(_ sender: Any) {
         let myProfileVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.myProfileViewController) as? MyProfileViewController
         navigationController?.pushViewController(myProfileVC!, animated: true)
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
     }
     
     

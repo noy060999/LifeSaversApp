@@ -14,6 +14,7 @@ private class PopUpWindowView: UIView {
     let popupTitle = UILabel(frame: CGRect.zero)
     let popupText = UILabel(frame: CGRect.zero)
     let popupButton = UIButton(frame: CGRect.zero)
+    var isDissmissed = false
     
     let BorderWidth: CGFloat = 2.0
     
@@ -112,10 +113,18 @@ class PopUpWindow: UIViewController {
         modalTransitionStyle = .crossDissolve
         modalPresentationStyle = .overFullScreen
         
+        popUpWindowView.isDissmissed = false
         popUpWindowView.popupTitle.text = title
         popUpWindowView.popupText.text = text
         popUpWindowView.popupButton.setTitle(buttontext, for: .normal)
-        popUpWindowView.popupButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
+        if (buttontext == "אישור"){
+            print("going home")
+            popUpWindowView.popupButton.addTarget(self, action: #selector(moveToHome), for: .touchUpInside)
+        }
+        else {
+            print("dismiss")
+            popUpWindowView.popupButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
+        }
       
         // ...
         
@@ -125,10 +134,17 @@ class PopUpWindow: UIViewController {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    @objc func isDismissed(){
+        popUpWindowView.isDissmissed = true
+    }
     @objc func dismissView(){
-            self.dismiss(animated: true, completion: nil)
-        }
-    
+        self.dismiss(animated: true, completion: nil)
+    }
+    @objc func moveToHome (){
+        self.dismissView()
+        self.isDismissed()
+        //need to figure how to go back to homepage
+        print("inside movetohome")
+    }
 
 }

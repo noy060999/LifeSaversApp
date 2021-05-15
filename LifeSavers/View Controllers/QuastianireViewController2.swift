@@ -14,8 +14,10 @@ class QusatianireViewController2: UIViewController {
     @IBOutlet weak var stage2Q3_segmented: UISegmentedControl!
 
 
+    @IBOutlet weak var backBtnPage2: UIButton!
     @IBOutlet weak var gotoPage3Btn: UIButton!
     @IBOutlet weak var gotoPage1Btn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,13 @@ class QusatianireViewController2: UIViewController {
     navigationController?.popViewController(animated: true)
     
 }
+    
+    @IBAction func goBackPage2Action(_ sender: Any) {
+        let homePageVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.homeViewController) as? HomeViewController
+        navigationController?.pushViewController(homePageVC!, animated: true)
+        self.dismiss(animated: true, completion: nil)
+        
+    }
     
     func getUserAnswers () -> Bool{
         let ans1 = stage2Q1_segmented.selectedSegmentIndex;
