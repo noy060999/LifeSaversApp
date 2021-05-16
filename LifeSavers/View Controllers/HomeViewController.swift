@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleButtons()
+        
         setNameFromAuth()
         
     }
@@ -78,41 +78,6 @@ class HomeViewController: UIViewController {
         //self.dismiss(animated: true, completion: nil)
     }
     
-    func styleButtons(){
-        homeVC_fillQ_btn.layer.cornerRadius = 28.0
-        homeVC_fillQ_btn.layer.borderColor = UIColor.systemRed.cgColor
-        homeVC_fillQ_btn.layer.borderWidth = 3
-        homeVC_fillQ_btn.backgroundColor = UIColor(red: 1, green: 0.8, blue: 0.8, alpha: 1)
-        /*homeVC_fillQ_btn.setImage(UIImage(named: "contact-form"), for: .normal)
-         homeVC_fillQ_btn.imageView?.contentMode = .scaleAspectFit
-         alignImageAndTitleVertically(button: homeVC_fillQ_btn)*/
-        let imageSize:CGSize = CGSize(width: 10, height: 10)
-        
-        homeVC_fillQ_btn.frame = CGRect(x: 200, y: 200, width: 70, height: 70)
-        homeVC_fillQ_btn.setImage(UIImage(named: "contact-form"), for: UIControl.State.normal)
-        
-        homeVC_fillQ_btn.imageEdgeInsets = UIEdgeInsets(
-            top: (homeVC_fillQ_btn.frame.size.height - imageSize.height) / 2,
-            left: (homeVC_fillQ_btn.frame.size.width - imageSize.width) / 2,
-            bottom: (homeVC_fillQ_btn.frame.size.height - imageSize.height) / 2,
-            right: (homeVC_fillQ_btn.frame.size.width - imageSize.width) / 2)
-        
-        //self.view.addSubview(button)
-        
-    }
-    
-    func alignImageAndTitleVertically(button: UIButton,padding: CGFloat = 6.0) {
-        let spacing: CGFloat = 6.0
-        
-        let imageSize = button.imageView!.frame.size
-        
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: -imageSize.width, bottom: -(imageSize.height + spacing), right: 0)
-        
-        let titleSize = button.titleLabel!.frame.size
-        
-        button.imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + spacing), left: 0, bottom: 0, right: -titleSize.width)
-        
-    }
     
     
 }

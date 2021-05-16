@@ -190,13 +190,15 @@ class QuastianireViewController1: UIViewController {
         _ = reminedToDonate_segmented_q.selectedSegmentIndex
         _ = agreementToSearching_segmented_q.selectedSegmentIndex
         
-        
-        let floatWeight = (weight! as NSString).floatValue
-        let intAge = (age! as NSString).intValue
-        if (floatWeight < 50.0){
-            showErr(msg: "לא ניתן לתרום דם במשקל נמוך מ-50 ק״ג")
-            return "weight too low"
+        if (weight != ""){
+            let floatWeight = (weight! as NSString).floatValue
+            if (floatWeight < 50.0){
+                showErr(msg: "לא ניתן לתרום דם במשקל נמוך מ-50 ק״ג")
+                return "weight too low"
+            }
         }
+        let intAge = (age! as NSString).intValue
+        
         if (intAge < 17 || intAge > 60){
             showErr(msg: "ניתן לתרום דם מגיל 17-60 בלבד")
             return "invalid age"

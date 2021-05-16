@@ -30,7 +30,7 @@ class SignInViewController: UIViewController {
         //to dismiss keyboard when tapping the screen
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(view.endEditing(_:)))
         view.addGestureRecognizer(tap)
-        
+        signInVC_signIn_btn.customBtnSignIn()
         //dismiss errorLabel
         errorLabel.alpha = 0
     }

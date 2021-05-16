@@ -25,6 +25,7 @@
 		21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F93B7124B79DFF00BC5F47 /* Const.swift */; };
 		B769B125AB95F1C3C71B3B93 /* Pods_LifeSavers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */; };
 		C017CDA22646B43000325847 /* PopupWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017CDA12646B43000325847 /* PopupWindow.swift */; };
+		C0A06FC526511EC90098B6D5 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A06FC426511EC90098B6D5 /* Extenstions.swift */; };
 		C0AE8910264D44C700774DA3 /* QuastianireViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */; };
 		C0AE8912264D503D00774DA3 /* QusatianireViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */; };
 		C0AE8914264D5D8400774DA3 /* QusatianireViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */; };
@@ -52,6 +53,7 @@
 		A1502CC200DEC5190A156C6B /* Pods-LifeSavers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.release.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.release.xcconfig"; sourceTree = "<group>"; };
 		C017CDA12646B43000325847 /* PopupWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupWindow.swift; sourceTree = "<group>"; };
 		C089348E26428A3400599A2C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0A06FC426511EC90098B6D5 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuastianireViewController2.swift; sourceTree = "<group>"; };
 		C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QusatianireViewController3.swift; sourceTree = "<group>"; };
 		C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QusatianireViewController4.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				21F93B7124B79DFF00BC5F47 /* Const.swift */,
 				217DB36B24B8F28F00E9751D /* Location.swift */,
+				C0A06FC426511EC90098B6D5 /* Extenstions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A06FC526511EC90098B6D5 /* Extenstions.swift in Sources */,
 				21240C3A24B4A95200A24390 /* SignInViewController.swift in Sources */,
 				21240C4424B4B27800A24390 /* ActivePositionsViewController.swift in Sources */,
 				21240C2224B485AD00A24390 /* ViewController.swift in Sources */,

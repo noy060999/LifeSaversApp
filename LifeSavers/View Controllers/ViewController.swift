@@ -21,19 +21,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleButtons()
-        
+        mainVC_signIn_btn.customBtnSignIn()
+        mainVC_signUp_btn.customBtnSignUp()
     }
     
-    func styleButtons() {
-        mainVC_signUp_btn.layer.cornerRadius = 30.0
-        mainVC_signUp_btn.layer.borderWidth = 3
-        mainVC_signUp_btn.layer.borderColor = UIColor.systemBlue.cgColor
-        mainVC_signUp_btn.backgroundColor = UIColor.white
-        mainVC_signIn_btn.layer.cornerRadius = 30.0
-        mainVC_signIn_btn.layer.borderWidth = 3
-        mainVC_signIn_btn.layer.borderColor = UIColor.black.cgColor
-        mainVC_signIn_btn.backgroundColor = UIColor.white
-    }
+    
 }
 

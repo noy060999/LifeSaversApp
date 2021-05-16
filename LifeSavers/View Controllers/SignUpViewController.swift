@@ -51,6 +51,7 @@ class SignUpViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(view.endEditing(_:)))
         view.addGestureRecognizer(tap)
         
+        signUpVC_signUp_btn.customBtnSignUp()
         //dismiss errorLabel
         errorLabel.alpha = 0
         
