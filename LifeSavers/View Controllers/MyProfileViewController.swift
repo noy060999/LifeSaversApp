@@ -66,6 +66,7 @@ class MyProfileViewController: UIViewController {
         errorLbl.alpha = 0
         finishEditBtn.alpha = 0
         getUserParameters()
+        addDonationBtn.customBtnSignIn()
         
         //dismiss keyboard when tapping the screen
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(view.endEditing(_:)))
@@ -96,6 +97,9 @@ class MyProfileViewController: UIViewController {
     
     
     @IBAction func addDonationAction(_ sender: Any) {
+        var addDonatePopUpWindow: AddDonatePopupVC!
+        addDonatePopUpWindow = AddDonatePopupVC(title: "הוספת תרומה", buttontext: "הוסף")
+        self.present(addDonatePopUpWindow, animated: true, completion: nil)
     }
     @IBAction func finishEditingClicked(_ sender: Any) {
         let uid = (Auth.auth().currentUser?.uid)!

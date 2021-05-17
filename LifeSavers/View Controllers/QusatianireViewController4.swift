@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import PencilKit
+
 class QusatianireViewController4: UIViewController {
     @IBOutlet weak var goBack: UIButton!
 
@@ -34,6 +36,9 @@ class QusatianireViewController4: UIViewController {
     
     @IBOutlet weak var errLbl: UILabel!
     
+        
+    
+    @IBOutlet weak var signatureView: CanvasView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +46,7 @@ class QusatianireViewController4: UIViewController {
         //to dismiss keyboard when tapping the screen
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(view.endEditing(_:)))
         view.addGestureRecognizer(tap)
+        
         
     }
     
@@ -168,4 +174,6 @@ class QusatianireViewController4: UIViewController {
         print("inside movetohome")
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
 }

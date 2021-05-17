@@ -14,6 +14,7 @@ private class PopUpWindowView: UIView {
     let popupTitle = UILabel(frame: CGRect.zero)
     let popupText = UILabel(frame: CGRect.zero)
     let popupButton = UIButton(frame: CGRect.zero)
+    let txtView = UITextView(frame: CGRect.zero)
     var isDissmissed = false
     
     let BorderWidth: CGFloat = 2.0
@@ -24,7 +25,7 @@ private class PopUpWindowView: UIView {
         backgroundColor = UIColor.black.withAlphaComponent(0.3)
         
         // Popup Background
-        popupView.backgroundColor = UIColor.systemTeal
+        popupView.backgroundColor = UIColor.white
         popupView.layer.borderWidth = BorderWidth
         popupView.layer.masksToBounds = true
         popupView.layer.borderColor = UIColor.white.cgColor
@@ -40,7 +41,7 @@ private class PopUpWindowView: UIView {
         popupTitle.textAlignment = .center
         
         // Popup Text
-        popupText.textColor = UIColor.white
+        popupText.textColor = UIColor.black
         popupText.font = UIFont.systemFont(ofSize: 15.0, weight: .semibold)
         popupText.numberOfLines = 0
         popupText.textAlignment = .center
@@ -50,9 +51,11 @@ private class PopUpWindowView: UIView {
         popupButton.titleLabel?.font = UIFont.systemFont(ofSize: 23.0, weight: .bold)
         popupButton.backgroundColor = UIColor.red
         
+        
         popupView.addSubview(popupTitle)
         popupView.addSubview(popupText)
         popupView.addSubview(popupButton)
+        popupView.addSubview(txtView)
         
         // Add the popupView(box) in the PopUpWindowView (semi-transparent background)
         addSubview(popupView)
@@ -95,6 +98,7 @@ private class PopUpWindowView: UIView {
             popupButton.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: -BorderWidth),
             popupButton.bottomAnchor.constraint(equalTo: popupView.bottomAnchor, constant: -BorderWidth)
             ])
+        
         
     }
     
