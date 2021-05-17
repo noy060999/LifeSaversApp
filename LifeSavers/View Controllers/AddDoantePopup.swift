@@ -18,6 +18,7 @@ private class AddDonatePopup: UIView {
     let txtField = UITextField(frame: CGRect.zero)
     let txtFieldDate = UIDatePicker(frame: CGRect.zero)
     let dateLabel = UILabel(frame: CGRect.zero)
+    let closeButton = UIButton(frame: CGRect.zero)
     
     let BorderWidth: CGFloat = 2.0
     
@@ -42,6 +43,10 @@ private class AddDonatePopup: UIView {
         popupTitle.numberOfLines = 1
         popupTitle.textAlignment = .center
         
+        
+        //close button
+        let closeImg = UIImage(named: "cancel.png")
+        closeButton.setImage(closeImg, for: .normal)
         
         
         // Popup TextField
@@ -70,6 +75,7 @@ private class AddDonatePopup: UIView {
         
         
         popupView.addSubview(popupTitle)
+        popupView.addSubview(closeButton)
         popupView.addSubview(txtField)
         popupView.addSubview(dateLabel)
         popupView.addSubview(txtFieldDate)
@@ -94,6 +100,16 @@ private class AddDonatePopup: UIView {
             popupTitle.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: -BorderWidth),
             popupTitle.topAnchor.constraint(equalTo: popupView.topAnchor, constant: BorderWidth),
             popupTitle.heightAnchor.constraint(equalToConstant: 55)
+            ])
+        
+        // closeButton constraints
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            closeButton.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: 8),
+            //closeButton.trailingAnchor.constraint(equalTo: popupTitle.trailingAnchor, constant: 0),
+            closeButton.widthAnchor.constraint(equalToConstant: 25),
+            closeButton.topAnchor.constraint(equalTo: popupView.topAnchor, constant: 8),
+            closeButton.heightAnchor.constraint(equalToConstant: 25)
             ])
         
         
@@ -165,6 +181,7 @@ class AddDonatePopupVC: UIViewController {
         //popUpWindowView.txtField.text = text
         popUpWindowView.popupButton.setTitle(buttontext, for: .normal)
         popUpWindowView.popupButton.addTarget(self, action: #selector(addDonateToUser), for: .touchUpInside)
+        popUpWindowView.closeButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
 
       
         // ...
@@ -194,17 +211,21 @@ class AddDonatePopupVC: UIViewController {
             print(res)*/
             if (res != nil){
                 donationArray = res! as [String]
-                if (donateCity != ""){
+                if (donateCity != "" && donateCity != "הזן עיר"){
                     let donateFullStr = "city: " + donateCity + ", date: " + dateStr
                     donationArray.append(donateFullStr)
                     print("after adding")
                     print(donationArray)
+                    let db = Firestore.firestore()
+                    db.collection("users").document(uid).updateData(["donations": donationArray] )
+                    self.dismissView()
                 }
-                let db = Firestore.firestore()
-                db.collection("users").document(uid).updateData(["donations": donationArray] )
+                else {
+                    self.popUpWindowView.txtField.text = "הזן עיר"
+                }
+                
             }
         }
-        self.dismissView()
     }
     
     func getDonationsArr (userAuthID : String, completion:@escaping(([String]?) -> ())){
