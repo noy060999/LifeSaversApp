@@ -18,31 +18,21 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeVC_donationHistory_btn: UIButton!
     
     
-    //set name at helloLabel
-    func setNameFromAuth (){
-        let userAuthID = Auth.auth().currentUser?.uid
-        let db = Firestore.firestore()
-        db.collection("users").document(userAuthID!).getDocument { (document, error) in
-            if error == nil{
-                if document != nil && document!.exists{
-                    let documentData = document!.data()
-                    let optionalName = documentData?["firstName"]
-                    //let optionalPhone = documentData?["phone"]
-                    let name = optionalName!
-                    self.homeVC_hello_lbl.text = "היי \(String(describing: name))!"
-                }
-            }
-            else{
-                print("error")
-            }
-        }
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setNameFromAuth()
         
     }
+    
+    
+    @IBAction func gotoDonationHistory(_ sender: Any) {
+        let donationHistoryVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.donationHistoryViewController) as? DonationHistoryViewController
+        navigationController?.pushViewController(donationHistoryVC!, animated: true)
+        
+    }
+    
     
     
     
@@ -78,6 +68,24 @@ class HomeViewController: UIViewController {
         //self.dismiss(animated: true, completion: nil)
     }
     
-    
+    //set name at helloLabel
+    func setNameFromAuth (){
+        let userAuthID = Auth.auth().currentUser?.uid
+        let db = Firestore.firestore()
+        db.collection("users").document(userAuthID!).getDocument { (document, error) in
+            if error == nil{
+                if document != nil && document!.exists{
+                    let documentData = document!.data()
+                    let optionalName = documentData?["firstName"]
+                    //let optionalPhone = documentData?["phone"]
+                    let name = optionalName!
+                    self.homeVC_hello_lbl.text = "היי \(String(describing: name))!"
+                }
+            }
+            else{
+                print("error")
+            }
+        }
+    }
     
 }

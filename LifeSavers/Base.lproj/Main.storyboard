@@ -477,17 +477,17 @@
                                                 <rect key="frame" x="20" y="0.0" width="374" height="900"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="160" translatesAutoresizingMaskIntoConstraints="NO" id="0A5-Q6-esI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="56.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="63.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6e-9g-71b">
-                                                                <rect key="frame" x="0.0" y="0.0" width="107" height="56.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="107" height="63.5"/>
                                                                 <state key="normal" title="Button" image="house.fill" catalog="system"/>
                                                                 <connections>
                                                                     <action selector="backClicked:" destination="6Fg-4B-B0p" eventType="touchUpInside" id="eCR-7I-ETc"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uA8-0n-sra">
-                                                                <rect key="frame" x="267" y="0.0" width="107" height="56.5"/>
+                                                                <rect key="frame" x="267" y="0.0" width="107" height="63.5"/>
                                                                 <state key="normal" title="Button">
                                                                     <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="default"/>
                                                                 </state>
@@ -498,43 +498,29 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הפרופיל שלי" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKN-On-XZC">
-                                                        <rect key="frame" x="0.0" y="76.5" width="374" height="57"/>
+                                                        <rect key="frame" x="0.0" y="83.5" width="374" height="64"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfm-sQ-fFo">
-                                                        <rect key="frame" x="0.0" y="153.5" width="374" height="56.5"/>
+                                                        <rect key="frame" x="0.0" y="167.5" width="374" height="63.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="סיום"/>
                                                         <connections>
                                                             <action selector="finishEditingClicked:" destination="6Fg-4B-B0p" eventType="touchUpInside" id="anI-OX-OXR"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-fW-Jzr">
-                                                        <rect key="frame" x="0.0" y="230" width="374" height="56.5"/>
-                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="הוספת תרומה">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <imageReference key="image" image="plus.square.on.square" catalog="system" symbolScale="medium"/>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="addDonationAction:" destination="6Fg-4B-B0p" eventType="touchUpInside" id="YRX-lA-TE2"/>
-                                                        </connections>
-                                                    </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yMP-CU-lud" userLabel="first Name">
-                                                        <rect key="frame" x="0.0" y="306.5" width="374" height="57"/>
+                                                        <rect key="frame" x="0.0" y="251" width="374" height="63.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHl-Oz-0tO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="57"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שם פרטי:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moD-4Q-3pt">
-                                                                <rect key="frame" x="308" y="0.0" width="66" height="57"/>
+                                                                <rect key="frame" x="308" y="0.0" width="66" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -542,15 +528,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-Sd-Cxp" userLabel="family Name">
-                                                        <rect key="frame" x="0.0" y="383.5" width="374" height="56.5"/>
+                                                        <rect key="frame" x="0.0" y="334.5" width="374" height="63.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E97-pv-47i">
-                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="56.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שם משפחה:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aon-7G-uy5">
-                                                                <rect key="frame" x="288" y="0.0" width="86" height="56.5"/>
+                                                                <rect key="frame" x="288" y="0.0" width="86" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -558,15 +544,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5sT-9s-fLc" userLabel="phone">
-                                                        <rect key="frame" x="0.0" y="460" width="374" height="56.5"/>
+                                                        <rect key="frame" x="0.0" y="418" width="374" height="64"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h89-hH-6Ai">
-                                                                <rect key="frame" x="0.0" y="0.0" width="310.5" height="56.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="310.5" height="64"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="טלפון:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDd-X5-0wf">
-                                                                <rect key="frame" x="330.5" y="0.0" width="43.5" height="56.5"/>
+                                                                <rect key="frame" x="330.5" y="0.0" width="43.5" height="64"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -574,15 +560,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uyB-g3-Dec" userLabel="id">
-                                                        <rect key="frame" x="0.0" y="536.5" width="374" height="57"/>
+                                                        <rect key="frame" x="0.0" y="502" width="374" height="63.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-m2-zX2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="264.5" height="57"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="264.5" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="תעודת זהות:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28W-3p-23N">
-                                                                <rect key="frame" x="284.5" y="0.0" width="89.5" height="57"/>
+                                                                <rect key="frame" x="284.5" y="0.0" width="89.5" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -590,15 +576,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-c3-4lm" userLabel="gender">
-                                                        <rect key="frame" x="0.0" y="613.5" width="374" height="56.5"/>
+                                                        <rect key="frame" x="0.0" y="585.5" width="374" height="63.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-Cj-1gs">
-                                                                <rect key="frame" x="0.0" y="0.0" width="328.5" height="56.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="328.5" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מין:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQK-PI-MwI">
-                                                                <rect key="frame" x="348.5" y="0.0" width="25.5" height="56.5"/>
+                                                                <rect key="frame" x="348.5" y="0.0" width="25.5" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -606,15 +592,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cF1-Pa-zM8" userLabel="birthdate">
-                                                        <rect key="frame" x="0.0" y="690" width="374" height="56.5"/>
+                                                        <rect key="frame" x="0.0" y="669" width="374" height="63.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QE3-Ag-bh8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="56.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="תאריך לידה:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOS-Ym-0Wz">
-                                                                <rect key="frame" x="288" y="0.0" width="86" height="56.5"/>
+                                                                <rect key="frame" x="288" y="0.0" width="86" height="63.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -622,15 +608,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DjV-yZ-GBX" userLabel="blood type">
-                                                        <rect key="frame" x="0.0" y="766.5" width="374" height="57"/>
+                                                        <rect key="frame" x="0.0" y="752.5" width="374" height="64"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uu6-Zg-dUh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="302" height="57"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="302" height="64"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="סוג דם:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-sm-wWQ">
-                                                                <rect key="frame" x="322" y="0.0" width="52" height="57"/>
+                                                                <rect key="frame" x="322" y="0.0" width="52" height="64"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -638,7 +624,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שגיאה" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nY-55-V6u">
-                                                        <rect key="frame" x="0.0" y="843.5" width="374" height="56.5"/>
+                                                        <rect key="frame" x="0.0" y="836.5" width="374" height="63.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
@@ -677,7 +663,6 @@
                     <navigationItem key="navigationItem" id="jeg-gf-Vtk"/>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
-                        <outlet property="addDonationBtn" destination="N7d-fW-Jzr" id="3uc-a8-Xro"/>
                         <outlet property="backBtn" destination="y6e-9g-71b" id="ezW-fl-jKM"/>
                         <outlet property="birthdateTxt" destination="QE3-Ag-bh8" id="1ng-8l-NPp"/>
                         <outlet property="bloodTypeTxt" destination="Uu6-Zg-dUh" id="FKp-Wg-ZGy"/>
@@ -694,6 +679,125 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oD8-zk-fbU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2576.811594202899" y="138.61607142857142"/>
+        </scene>
+        <!--DonationHistoryViewController-->
+        <scene sceneID="xLt-IQ-amd">
+            <objects>
+                <viewController storyboardIdentifier="donationHistoryVC" id="1bk-Ec-YoW" userLabel="DonationHistoryViewController" customClass="DonationHistoryViewController" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TFQ-D6-7dK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="160" translatesAutoresizingMaskIntoConstraints="NO" id="gis-Je-uuH">
+                                <rect key="frame" x="20" y="64" width="78" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxA-wD-kkV">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="22"/>
+                                        <state key="normal" title="Button" image="house.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="goToHomeAction:" destination="1bk-Ec-YoW" eventType="touchUpInside" id="4Ui-C4-hi4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3g-rG-Y8H">
+                                <rect key="frame" x="20" y="185" width="374" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="kyh-by-eCS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="הוספת תרומה">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="plus.square.on.square" catalog="system" symbolScale="medium"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDonationAction:" destination="1bk-Ec-YoW" eventType="touchUpInside" id="C3j-rd-Jwg"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-bE-5hf">
+                                <rect key="frame" x="20" y="265" width="80" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-jD-o57">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <state key="normal" title="Refresh" image="arrow.clockwise" catalog="system">
+                                            <color key="titleColor" systemColor="systemBlueColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="refreshAction:" destination="1bk-Ec-YoW" eventType="touchUpInside" id="pF4-bD-nTw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="היסטוריית התרומות שלי" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyP-8I-A78">
+                                <rect key="frame" x="90" y="136" width="234" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cvx-GW-Dg1" userLabel="טבלת תרומות">
+                                <rect key="frame" x="7" y="299" width="400" height="531"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="systemRedColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="WUj-19-wuw" style="IBUITableViewCellStyleDefault" id="3Y6-Si-4OJ">
+                                        <rect key="frame" x="0.0" y="24.5" width="400" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Y6-Si-4OJ" id="vSx-dL-TlJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WUj-19-wuw">
+                                                    <rect key="frame" x="20" y="0.0" width="360" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eHN-tx-2fs" id="UGq-IR-4dl"/>
+                                    <outlet property="delegate" destination="eHN-tx-2fs" id="PJd-Uf-GLU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bow-kk-clF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jyP-8I-A78" firstAttribute="leading" secondItem="bow-kk-clF" secondAttribute="leading" constant="90" id="2zU-bg-I0H"/>
+                            <constraint firstItem="vFG-bE-5hf" firstAttribute="top" secondItem="v3g-rG-Y8H" secondAttribute="bottom" constant="20" id="CaC-RL-kp8"/>
+                            <constraint firstItem="v3g-rG-Y8H" firstAttribute="top" secondItem="jyP-8I-A78" secondAttribute="bottom" constant="20" id="EOt-bQ-euR"/>
+                            <constraint firstItem="gis-Je-uuH" firstAttribute="top" secondItem="bow-kk-clF" secondAttribute="top" constant="20" id="QEg-6S-RoM"/>
+                            <constraint firstItem="v3g-rG-Y8H" firstAttribute="centerX" secondItem="jyP-8I-A78" secondAttribute="centerX" id="Rar-hU-1UF"/>
+                            <constraint firstItem="bow-kk-clF" firstAttribute="bottom" secondItem="Cvx-GW-Dg1" secondAttribute="bottom" constant="32" id="SPA-Tc-O5E"/>
+                            <constraint firstItem="v3g-rG-Y8H" firstAttribute="leading" secondItem="gis-Je-uuH" secondAttribute="leading" id="U7s-ic-2nM"/>
+                            <constraint firstItem="jyP-8I-A78" firstAttribute="centerX" secondItem="TFQ-D6-7dK" secondAttribute="centerX" id="jTB-Sl-PZL"/>
+                            <constraint firstItem="jyP-8I-A78" firstAttribute="top" secondItem="gis-Je-uuH" secondAttribute="bottom" constant="50" id="mOq-8D-c5q"/>
+                            <constraint firstItem="Cvx-GW-Dg1" firstAttribute="top" secondItem="jyP-8I-A78" secondAttribute="bottom" constant="134" id="pKG-WQ-1b1"/>
+                            <constraint firstItem="jyP-8I-A78" firstAttribute="centerX" secondItem="Cvx-GW-Dg1" secondAttribute="centerX" id="st8-1b-fYM"/>
+                            <constraint firstItem="Cvx-GW-Dg1" firstAttribute="leading" secondItem="bow-kk-clF" secondAttribute="leading" constant="7" id="uA0-Tw-m92"/>
+                            <constraint firstItem="gis-Je-uuH" firstAttribute="leading" secondItem="bow-kk-clF" secondAttribute="leading" constant="20" id="yft-aD-cOD"/>
+                            <constraint firstItem="vFG-bE-5hf" firstAttribute="leading" secondItem="bow-kk-clF" secondAttribute="leading" constant="20" id="zaS-9D-NCs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addDonateBtn" destination="v3g-rG-Y8H" id="TSV-wt-WbJ"/>
+                        <outlet property="donationTable" destination="Cvx-GW-Dg1" id="XmB-94-PTz"/>
+                        <outlet property="goBackBtn" destination="gxA-wD-kkV" id="I67-B6-Ecm"/>
+                        <outlet property="refreshInfoBtn" destination="SWl-jD-o57" id="Hbm-iX-qCO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zgx-km-AGM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3311.594202898551" y="-86.383928571428569"/>
         </scene>
         <!--HomePageViewController-->
         <scene sceneID="UeT-EI-VAo">
@@ -808,6 +912,9 @@
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <imageReference key="image" image="list-red" symbolScale="large"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="gotoDonationHistory:" destination="H24-1f-gPl" eventType="touchUpInside" id="S23-RO-Vdv"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="היסטוריית תרומות" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoZ-aQ-U8Q">
                                                         <rect key="frame" x="0.0" y="150" width="150" height="20"/>
@@ -1530,14 +1637,14 @@
                                                         <rect key="frame" x="0.0" y="1283.5" width="394" height="65.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JRi-F6-Vkb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="66.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="55" height="66.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13. אם לא קיימות סיבות אישיות או אחרות, שבגללן לא ניתן להשתמש במנת הדם שתתרום לעירוי חולה,  סמן ״לא״" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-zA-tYq">
-                                                                <rect key="frame" x="131.5" y="0.0" width="262.5" height="65.5"/>
+                                                                <rect key="frame" x="75" y="0.0" width="319" height="65.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2399,11 +2506,11 @@
                                                         <rect key="frame" x="0.0" y="1317.5" width="394" height="63"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HD-3Z-LiX" customClass="CanvasView" customModule="LifeSavers" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="244.5" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="101" height="63"/>
                                                                 <color key="backgroundColor" systemColor="linkColor"/>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="חתימה" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRy-Rk-R6b">
-                                                                <rect key="frame" x="244.5" y="0.0" width="149.5" height="63"/>
+                                                                <rect key="frame" x="101" y="0.0" width="293" height="63"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2514,6 +2621,7 @@
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="arrow.forward" catalog="system" width="128" height="98"/>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>

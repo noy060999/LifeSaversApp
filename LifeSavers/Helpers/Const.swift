@@ -20,6 +20,7 @@ struct Const {
         static let quastianireViewController2 = "quastianireVC2"
         static let quastianireViewController3 = "quastianireVC3"
         static let quastianireViewController4 = "quastianireVC4"
+        static let donationHistoryViewController = "donationHistoryVC"
 
 
     }

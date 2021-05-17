@@ -31,6 +31,7 @@
 		C0AE8914264D5D8400774DA3 /* QusatianireViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */; };
 		C0B4F4C52652A1170051542E /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4F4C42652A1170051542E /* CanvasView.swift */; };
 		C0B4F4C72652AA610051542E /* AddDoantePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4F4C62652AA610051542E /* AddDoantePopup.swift */; };
+		C0F987582652FDB5008E829C /* DonationHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F987572652FDB5008E829C /* DonationHistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QusatianireViewController4.swift; sourceTree = "<group>"; };
 		C0B4F4C42652A1170051542E /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		C0B4F4C62652AA610051542E /* AddDoantePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDoantePopup.swift; sourceTree = "<group>"; };
+		C0F987572652FDB5008E829C /* DonationHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationHistoryViewController.swift; sourceTree = "<group>"; };
 		E0B02704F88013AE080C938E /* Pods-LifeSavers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.debug.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */,
 				C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */,
 				C0B4F4C62652AA610051542E /* AddDoantePopup.swift */,
+				C0F987572652FDB5008E829C /* DonationHistoryViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				C017CDA22646B43000325847 /* PopupWindow.swift in Sources */,
 				21240C4024B4A99000A24390 /* QuastianireViewController1.swift in Sources */,
 				21240C1E24B485AD00A24390 /* AppDelegate.swift in Sources */,
+				C0F987582652FDB5008E829C /* DonationHistoryViewController.swift in Sources */,
 				C0AE8910264D44C700774DA3 /* QuastianireViewController2.swift in Sources */,
 				21240C2024B485AD00A24390 /* SceneDelegate.swift in Sources */,
 				C0AE8914264D5D8400774DA3 /* QusatianireViewController4.swift in Sources */,
