@@ -203,7 +203,7 @@ class AddDonatePopupVC: UIViewController {
                 let db = Firestore.firestore()
                 db.collection("users").document(uid).updateData(["donations": donationArray] )
             }
-        }        
+        }
         self.dismissView()
     }
     
@@ -213,7 +213,7 @@ class AddDonatePopupVC: UIViewController {
         var donate_array = Array<String>()
         db.collection("users").document(userAuthID).getDocument { (document, error) in
             if let document = document {
-                donate_array = document["donations"] as? Array ?? [""]
+                donate_array = document["donations"] as? Array ?? []
                 print ("inside")
                 print(donate_array)
                 completion(donate_array)
