@@ -48,7 +48,7 @@ private class AddDonatePopup: UIView {
         let closeImg = UIImage(named: "cancel.png")
         closeButton.setImage(closeImg, for: .normal)
         
-        
+            
         // Popup TextField
         txtField.textColor = UIColor.black
         txtField.font = UIFont.systemFont(ofSize: 20.0, weight: .semibold)

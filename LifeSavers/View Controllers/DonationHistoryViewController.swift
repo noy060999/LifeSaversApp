@@ -21,6 +21,7 @@ class DonationHistoryViewController : UIViewController,UITableViewDelegate, UITa
     
     var allDonations : [String] = []
     var allDoantionsStr : [String] = []
+    var allDatesStr : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,8 @@ class DonationHistoryViewController : UIViewController,UITableViewDelegate, UITa
         addDonateBtn.customBtnSignIn()
         let uid = (Auth.auth().currentUser?.uid)!
         getDonationsArr(userAuthID: uid)
+        
+        
         
         
     }
@@ -64,9 +67,11 @@ class DonationHistoryViewController : UIViewController,UITableViewDelegate, UITa
                     let date = datePart[1].trimmingCharacters(in: .whitespacesAndNewlines)
                     let hebrewStr = "עיר: " + city + " " + "תאריך: " + date
                     self.allDoantionsStr.append(hebrewStr)
+                    self.allDatesStr.append(date)
                 }
                 print ("inside")
                 print(self.allDoantionsStr)
+                print(self.allDatesStr)
                 self.donationTable.reloadData()
                 if (self.allDoantionsStr.count == 0){
                     var popupWindow : PopUpWindow!
