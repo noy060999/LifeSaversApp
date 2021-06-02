@@ -66,7 +66,6 @@ class FirebaseService {
             }
             completion(self.allDoantionsStr)
         }
-        
     }
     
     static func getDatesArr (userAuthID : String, _ completion: @escaping (_ arr: [String]) -> Void){
@@ -91,7 +90,6 @@ class FirebaseService {
             if error != nil {
                 // Couldn't sign in
                 completion(error!.localizedDescription, true)
-                //self.showError(error!.localizedDescription)
             }
             else {
                 let userAuthID = Auth.auth().currentUser?.uid
@@ -108,9 +106,9 @@ class FirebaseService {
                         print("error")
                     }
                 }
-                //self.gotoHome()
             }
-        }    }
+        }
+    }
     static func sendPasswordReset(userEmail: String, completion: @escaping (_ res: String, _ error: Bool) -> Void){
         Auth.auth().sendPasswordReset(withEmail: userEmail) {(error) in
             if error != nil{
@@ -122,7 +120,8 @@ class FirebaseService {
                 completion(msg, false)
                 print("success sending email")
             }
-        }    }
+        }
+    }
     
     static func updateUserData(userAuthId: String, dataArr: [String: String]){
         let db = Firestore.firestore()
@@ -137,7 +136,6 @@ class FirebaseService {
     }
     
     static func getUserParameters(userAuthId: String,_ completion: @escaping (_ arr: [String: String], _ err: Bool) -> Void){
-        //let userAuthID = Auth.auth().currentUser?.uid
         let db = Firestore.firestore()
         db.collection("users").document(userAuthId).getDocument { (document, error) in
             if error == nil{
@@ -154,15 +152,6 @@ class FirebaseService {
                     let data = ["name": name as! String, "phone":phone as! String, "id": id as! String, "birthD": birthdate as! String, "gender": gender as! String, "bloodT": bloodType as! String, "familyN": familyName as! String]
                     
                     completion(data, false)
-                    
-                    //init textFields
-                    /*self.nameTxt.text = "\(String(describing: name))"
-                    self.phoneTxt.text = "\(String(describing: phone))"
-                    self.idText.text = "\(String(describing: id))"
-                    self.bloodTypeTxt.text = "\(String(describing: bloodType))"
-                    self.birthdateTxt.text = "\(String(describing: birthdate))"
-                    self.genderTxt.text = "\(String(describing: gender))"
-                    self.familyNameTxt.text = "\(String(describing: familyName))"*/
                 }
             }
             else{

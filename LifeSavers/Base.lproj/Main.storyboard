@@ -1637,14 +1637,14 @@
                                                         <rect key="frame" x="0.0" y="1283.5" width="394" height="65.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JRi-F6-Vkb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="55" height="66.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="66.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13. אם לא קיימות סיבות אישיות או אחרות, שבגללן לא ניתן להשתמש במנת הדם שתתרום לעירוי חולה,  סמן ״לא״" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-zA-tYq">
-                                                                <rect key="frame" x="75" y="0.0" width="319" height="65.5"/>
+                                                                <rect key="frame" x="131.5" y="0.0" width="262.5" height="65.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2191,17 +2191,17 @@
                                                 <rect key="frame" x="10" y="0.0" width="394" height="1600"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="TWM-cv-9fw" userLabel="homeView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="66.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSY-OT-MR4" userLabel="backBtn">
-                                                                <rect key="frame" x="0.0" y="0.0" width="122" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="122" height="66.5"/>
                                                                 <state key="normal" title="Button" image="house.fill" catalog="system"/>
                                                                 <connections>
                                                                     <action selector="goBackAction:" destination="CYv-n5-M59" eventType="touchUpInside" id="L9Z-RP-PCU"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gv-RO-QlG">
-                                                                <rect key="frame" x="272" y="0.0" width="122" height="63"/>
+                                                                <rect key="frame" x="272" y="0.0" width="122" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2209,23 +2209,23 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="המשך - חלק ג - פרטים רפואיים" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHB-um-JJH">
-                                                        <rect key="frame" x="0.0" y="73" width="394" height="63.5"/>
+                                                        <rect key="frame" x="0.0" y="76.5" width="394" height="67"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tG5-Bu-ok1" userLabel="q11">
-                                                        <rect key="frame" x="0.0" y="146.5" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="153.5" width="394" height="66.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-vc-hqp">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="67.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="עשיתי: קעקוע, בדיקה אנדוסקופית עם ביופסיה, דיקור סיני, איפור קבוע, עגיל בגוף, אפילציה / נדקרתי במחט משומש ב6 חודשים האחרונים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZy-KS-hjd">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2233,17 +2233,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="z2F-W4-JNN" userLabel="q12">
-                                                        <rect key="frame" x="0.0" y="219.5" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="230" width="394" height="66.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J1t-Rg-kae">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="67.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="אני סובל מהגדלת בלוטות, הזעת לילה, מאיבוד משקל, מחום" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEF-Bn-e6r">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2251,17 +2251,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NUW-pc-SbR" userLabel="q13">
-                                                        <rect key="frame" x="0.0" y="292.5" width="394" height="63.5"/>
+                                                        <rect key="frame" x="0.0" y="306.5" width="394" height="67"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="s0L-ZF-Uff">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ביקרתי בחו״ל ב12 החודשים האחרונים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7c-jX-xoq">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63.5"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="67"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2269,17 +2269,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dgI-b7-Rwu" userLabel="ארצות ל13">
-                                                        <rect key="frame" x="0.0" y="366" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="383.5" width="394" height="66.5"/>
                                                         <subviews>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="onA-5J-2v7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="66.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="פרט באיזה ארצות:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhH-2v-eZg">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2287,17 +2287,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SB5-7a-TLM" userLabel="q14">
-                                                        <rect key="frame" x="0.0" y="439" width="394" height="63.5"/>
+                                                        <rect key="frame" x="0.0" y="460" width="394" height="66.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hQd-Xf-M7t">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="67.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="גרתי מעל 6 חודשים בארץ נגועת מלריה, או חליתי במלריה ב 3 השנים האחרונות" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clA-lV-8an">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63.5"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2305,17 +2305,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4J1-1F-gEa" userLabel="q15">
-                                                        <rect key="frame" x="0.0" y="512.5" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="536.5" width="394" height="67"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tms-Jo-Rxu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="סבלתי ממחלה רצינית בעבר כגון: גידול ממאיר, נטיה לדמם, וכו׳" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxX-Zl-vsh">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="67"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2323,17 +2323,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qRe-Gc-9nq" userLabel="q16">
-                                                        <rect key="frame" x="0.0" y="585.5" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="613.5" width="394" height="66.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eHU-aS-Xgz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="67.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="אני חולה בסכרת, במחלת לב, באפילפסיה" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiR-oC-kBG">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2341,17 +2341,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="74t-Fl-2X5" userLabel="q17">
-                                                        <rect key="frame" x="0.0" y="658.5" width="394" height="63.5"/>
+                                                        <rect key="frame" x="0.0" y="690" width="394" height="66.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bzn-b6-Zwn">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="67.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="עברתי ניתוח כלשהו" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U79-4J-Thj">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63.5"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2359,17 +2359,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LUu-Bs-Th6" userLabel="ניתוחים ל17">
-                                                        <rect key="frame" x="0.0" y="732" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="766.5" width="394" height="67"/>
                                                         <subviews>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tQO-CM-5hO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="67"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="פרט:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pq-3e-LpO">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="67"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2377,17 +2377,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hw9-88-AVj" userLabel="q18">
-                                                        <rect key="frame" x="0.0" y="805" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="843.5" width="394" height="66.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RiV-8C-lif">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="67.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="יש/ הייתה לי בעיה בריאותית אחרת (חריפה/ כרונית)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-mH-caW">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2395,17 +2395,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VWf-4n-xFj" userLabel="פירוט ל18">
-                                                        <rect key="frame" x="0.0" y="878" width="394" height="63.5"/>
+                                                        <rect key="frame" x="0.0" y="920" width="394" height="66.5"/>
                                                         <subviews>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a2Y-bq-F0F">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="63.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="66.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="פרט:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVV-Ru-wGu">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63.5"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2413,17 +2413,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lDm-tu-GLZ" userLabel="q19">
-                                                        <rect key="frame" x="0.0" y="951.5" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="996.5" width="394" height="67"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qNd-kP-bds">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ננשכתי על ידי בע״ח זר ב-2 החודשים האחרונים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDO-WH-N7V">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="67"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2431,17 +2431,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="614-gS-q8r" userLabel="q20">
-                                                        <rect key="frame" x="0.0" y="1024.5" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="1073.5" width="394" height="66.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f92-hC-Jxl">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="67.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ביקרתי בחו״ל ב-28 הימים האחרונים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOT-4n-2rF">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2449,17 +2449,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mUC-9E-fcY" userLabel="פירוט ארצות ל20">
-                                                        <rect key="frame" x="0.0" y="1097.5" width="394" height="63.5"/>
+                                                        <rect key="frame" x="0.0" y="1150" width="394" height="66.5"/>
                                                         <subviews>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Lt-Ua-LpY">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="63.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="66.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="פרט:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SP-1j-GS7">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63.5"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2467,17 +2467,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="03O-Vd-fdX" userLabel="21">
-                                                        <rect key="frame" x="0.0" y="1171" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="1226.5" width="394" height="67"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uml-t5-mIP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לנשים בלבד: האם את בהריון או היית בהריון?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-ZB-v9r">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="67"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2485,32 +2485,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-8B-tIe" userLabel="22">
-                                                        <rect key="frame" x="0.0" y="1244" width="394" height="63.5"/>
+                                                        <rect key="frame" x="0.0" y="1303.5" width="394" height="66.5"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sWT-5c-S8o">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="64.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="67.5"/>
                                                                 <segments>
                                                                     <segment title="לא"/>
                                                                     <segment title="כן"/>
                                                                 </segments>
                                                             </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לנשים בלבד: האם היית בהריון מאז התרומה הקודמת?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeQ-fc-EzS">
-                                                                <rect key="frame" x="207" y="0.0" width="187" height="63.5"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Wbu-1C-N1l" userLabel="חתימה">
-                                                        <rect key="frame" x="0.0" y="1317.5" width="394" height="63"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HD-3Z-LiX" customClass="CanvasView" customModule="LifeSavers" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="101" height="63"/>
-                                                                <color key="backgroundColor" systemColor="linkColor"/>
-                                                            </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="חתימה" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRy-Rk-R6b">
-                                                                <rect key="frame" x="101" y="0.0" width="293" height="63"/>
+                                                                <rect key="frame" x="207" y="0.0" width="187" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2518,7 +2503,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wup-r5-LUt">
-                                                        <rect key="frame" x="0.0" y="1390.5" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="1380" width="394" height="66.5"/>
                                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
@@ -2530,25 +2515,25 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3o-XA-EOh">
-                                                        <rect key="frame" x="0.0" y="1463.5" width="394" height="63.5"/>
+                                                        <rect key="frame" x="0.0" y="1456.5" width="394" height="67"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZvE-sM-qxi" userLabel="pages">
-                                                        <rect key="frame" x="0.0" y="1537" width="394" height="63"/>
+                                                        <rect key="frame" x="0.0" y="1533.5" width="394" height="66.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gq-ki-g5d">
-                                                                <rect key="frame" x="0.0" y="0.0" width="126" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="126" height="66.5"/>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="עמוד 4 מתוך 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQb-a4-XPs">
-                                                                <rect key="frame" x="134" y="0.0" width="126" height="63"/>
+                                                                <rect key="frame" x="134" y="0.0" width="126" height="66.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SO-4R-9nf" userLabel="goto 3">
-                                                                <rect key="frame" x="268" y="0.0" width="126" height="63"/>
+                                                                <rect key="frame" x="268" y="0.0" width="126" height="66.5"/>
                                                                 <state key="normal">
                                                                     <imageReference key="image" image="arrow.forward" catalog="system" symbolScale="large"/>
                                                                 </state>
@@ -2611,7 +2596,6 @@
                         <outlet property="reasonForQ18_q4" destination="a2Y-bq-F0F" id="5O7-K2-xQN"/>
                         <outlet property="reasonForQ20_q4" destination="7Lt-Ua-LpY" id="dzg-OH-UV6"/>
                         <outlet property="sendAnswersBtn" destination="Wup-r5-LUt" id="qIe-sl-MIU"/>
-                        <outlet property="signatureView" destination="7HD-3Z-LiX" id="xAL-RK-t1o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKx-C6-cDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

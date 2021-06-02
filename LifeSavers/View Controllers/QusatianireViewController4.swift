@@ -37,9 +37,6 @@ class QusatianireViewController4: UIViewController {
     @IBOutlet weak var errLbl: UILabel!
     
         
-    
-    @IBOutlet weak var signatureView: CanvasView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setFieldsStyles()
