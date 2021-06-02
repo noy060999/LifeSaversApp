@@ -29,42 +29,30 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var birthdateTxt: UITextField!
     @IBOutlet weak var phoneTxt: UITextField!
     //get user parameters from the db by userId
-    func getUserParameters(){
-        let userAuthID = Auth.auth().currentUser?.uid
-        let db = Firestore.firestore()
-        db.collection("users").document(userAuthID!).getDocument { (document, error) in
-            if error == nil{
-                if document != nil && document!.exists{
-                    let documentData = document!.data()
-                    let name = (documentData?["firstName"])!
-                    let phone = (documentData?["phone"])!
-                    let id = (documentData?["id"])!
-                    let birthdate = (documentData?["birthDate"])!
-                    let gender = (documentData?["gender"])!
-                    let bloodType = (documentData?["bloodType"])!
-                    let familyName = (documentData?["familyName"])!
-                    
-                    //init textFields
-                    self.nameTxt.text = "\(String(describing: name))"
-                    self.phoneTxt.text = "\(String(describing: phone))"
-                    self.idText.text = "\(String(describing: id))"
-                    self.bloodTypeTxt.text = "\(String(describing: bloodType))"
-                    self.birthdateTxt.text = "\(String(describing: birthdate))"
-                    self.genderTxt.text = "\(String(describing: gender))"
-                    self.familyNameTxt.text = "\(String(describing: familyName))"
-                }
-            }
-            else{
-                print("error")
-            }
-        }
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         errorLbl.alpha = 0
         finishEditBtn.alpha = 0
-        getUserParameters()
+        let uid = (Auth.auth().currentUser?.uid)!
+        FirebaseService.getUserParameters(userAuthId: uid) { dataArray, err in
+            if (err){
+                self.errorLbl.alpha = 1
+                self.errorLbl.text = dataArray["err"]
+            }
+            else {
+                //init textFields
+                self.nameTxt.text = "\(String(describing: dataArray["name"]!))"
+                self.phoneTxt.text = "\(String(describing: dataArray["phone"]!))"
+                self.idText.text = "\(String(describing: dataArray["id"]!))"
+                self.bloodTypeTxt.text = "\(String(describing: dataArray["bloodT"]!))"
+                self.birthdateTxt.text = "\(String(describing: dataArray["birthD"]!))"
+                self.genderTxt.text = "\(String(describing: dataArray["gender"]!))"
+                self.familyNameTxt.text = "\(String(describing: dataArray["familyN"]!))"
+                
+            }
+        }
         
         //dismiss keyboard when tapping the screen
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(view.endEditing(_:)))
@@ -89,8 +77,6 @@ class MyProfileViewController: UIViewController {
         birthdateTxt.isEnabled = true
         genderTxt.isEnabled = true
         familyNameTxt.isEnabled = true
-        
-        
     }
     
     
@@ -107,13 +93,11 @@ class MyProfileViewController: UIViewController {
             let newBloodType = bloodTypeTxt.text
             let newBirthDate = birthdateTxt.text
             let newFamilyName = familyNameTxt.text
-            
-            let db = Firestore.firestore()
-            db.collection("users").document(uid).updateData(["name": newName as Any, "familyName":newFamilyName as Any, "id": newID as Any, "phone": newPhone as Any, "gender": newGender as Any, "bloodType": newBloodType as Any, "birthDate": newBirthDate as Any] )
+            let dataArray = ["name": newName!, "familyN": newFamilyName!,"id": newID!, "phone": newPhone!, "gender": newGender!, "bloodType": newBloodType!,"birthD": newBirthDate!]
+            FirebaseService.updateUserData(userAuthId: uid, dataArr: dataArray)
             editProfileBtn.alpha = 1
             finishEditBtn.alpha = 0
             makeAllTextFieldsDisabled()
-
         }
         else{
             errorLbl.alpha = 1

@@ -31,18 +31,24 @@ class DonationHistoryViewController : UIViewController,UITableViewDelegate, UITa
         
         addDonateBtn.customBtnSignIn()
         let uid = (Auth.auth().currentUser?.uid)!
-        getDonationsArr(userAuthID: uid)
-        
-        
-        
-        
+        FirebaseService.getDonationsArr(userAuthID: uid) { allDoantionsStrCompletion in
+            self.allDoantionsStr = allDoantionsStrCompletion
+            if  (allDoantionsStrCompletion.count > 0){
+                self.donationTable.reloadData()
+            }
+            if (allDoantionsStrCompletion.count == 0){
+                var popupWindow : PopUpWindow!
+                popupWindow = PopUpWindow(title: "אין נתונים להצגה", text: "המערכת לא מצאה תרומות קודמות להצגה", buttontext: "אישור")
+                self.present(popupWindow, animated: true, completion: nil)
+            }
+        }
     }
     
     
     //table view functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return allDoantionsStr.count
+        return self.allDoantionsStr.count
         
     }
     
@@ -54,47 +60,21 @@ class DonationHistoryViewController : UIViewController,UITableViewDelegate, UITa
         return cell
     }
     
-    func getDonationsArr (userAuthID : String){
-        let db = Firestore.firestore()
-        db.collection("users").document(userAuthID).getDocument { (document, error) in
-            if let document = document {
-                self.allDonations = document["donations"] as? Array ?? []
-                for donate in self.allDonations {
-                    let cityDate = donate.split(separator: ",")
-                    let cityPart = cityDate[0].split(separator: ":")
-                    let city = cityPart[1].trimmingCharacters(in: .whitespacesAndNewlines)
-                    let datePart = cityDate[1].split(separator: ":")
-                    let date = datePart[1].trimmingCharacters(in: .whitespacesAndNewlines)
-                    let hebrewStr = "עיר: " + city + " " + "תאריך: " + date
-                    self.allDoantionsStr.append(hebrewStr)
-                    self.allDatesStr.append(date)
-                }
-                print ("inside")
-                print(self.allDoantionsStr)
-                print(self.allDatesStr)
-                self.donationTable.reloadData()
-                if (self.allDoantionsStr.count == 0){
-                    var popupWindow : PopUpWindow!
-                    popupWindow = PopUpWindow(title: "אין נתונים להצגה", text: "המערכת לא מצאה תרומות קודמות להצגה", buttontext: "אישור")
-                    self.present(popupWindow, animated: true, completion: nil)
-                }
-            }
-        }
-        
-    }
+    
     @IBAction func addDonationAction(_ sender: Any) {
         var addDonatePopUpWindow: AddDonatePopupVC!
         addDonatePopUpWindow = AddDonatePopupVC(title: "הוספת תרומה", buttontext: "הוסף")
         self.present(addDonatePopUpWindow, animated: true, completion: nil)
-        
-        
     }
     
     
     @IBAction func refreshAction(_ sender: Any) {
-        let uid = Auth.auth().currentUser?.uid
-        self.allDoantionsStr.removeAll()
-        getDonationsArr(userAuthID: uid!)
+        let uid = (Auth.auth().currentUser?.uid)!
+        FirebaseService.getDonationsArr(userAuthID: uid) { allDoantionsStrCompletion in
+            self.allDoantionsStr.removeAll()
+            self.allDoantionsStr = allDoantionsStrCompletion
+            self.donationTable.reloadData()
+        }
     }
     
     @IBAction func goToHomeAction(_ sender: Any) {

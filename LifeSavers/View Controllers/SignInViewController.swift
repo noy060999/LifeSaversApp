@@ -21,6 +21,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInVC_password_edt: UITextField!
     @IBOutlet weak var signInVC_signIn_btn: UIButton!
     @IBOutlet weak var forgotPassword_btn: UIButton!
+    
     var userEmail: String = ""
     var userPassword: String = ""
     var userRememberMe: Bool = true
@@ -77,16 +78,14 @@ class SignInViewController: UIViewController {
         }
         else {
             errorLabel.text = ""
-            Auth.auth().sendPasswordReset(withEmail: userEmail) {(error) in
-                if error != nil{
-                    self.showError(error!.localizedDescription)
-                    print(error!)
+            FirebaseService.sendPasswordReset(userEmail: userEmail) { resultMsg, error in
+                if (error){
+                    self.showError(resultMsg)
                 }
                 else {
-                    let msg = "הקישור לאיפוס הסיסמה נשלח בהצלחה"
-                    self.errorLabel.textColor = UIColor(named: "blue")
-                    self.showError(msg)
-                    print("success sending email")
+                    self.errorLabel.alpha = 1
+                    self.errorLabel.text = resultMsg
+                    self.errorLabel.textColor = UIColor.systemBlue
                 }
             }
         }
@@ -98,28 +97,13 @@ class SignInViewController: UIViewController {
         if error != nil{
             showError(error!)
         }
-            
         else{
             getParameters()
-            Auth.auth().signIn(withEmail: userEmail, password: userPassword) { (result, error) in
-                
-                if error != nil {
-                    // Couldn't sign in
-                    self.showError(error!.localizedDescription)
+            FirebaseService.loginUser(userEmail: userEmail, userPassword: userPassword, rememberMe: userRememberMe) { msg, err in
+                if (err){
+                    self.showError(msg)
                 }
                 else {
-                    let userAuthID = Auth.auth().currentUser?.uid
-                    let db = Firestore.firestore()
-                    db.collection("users").document(userAuthID!).getDocument { (document, error) in
-                        if error == nil{
-                            if document != nil && document!.exists{
-                                db.collection("users").document(userAuthID!).updateData(["rememberMe": self.userRememberMe as Any])
-                            }
-                        }
-                        else{
-                            print("error")
-                        }
-                    }
                     self.gotoHome()
                 }
             }

@@ -18,18 +18,24 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeVC_activePositions_btn: UIButton!
     @IBOutlet weak var homeVC_donationHistory_btn: UIButton!
     
-    var allDonations : [String] = []
-    var allDoantionsStr : [String] = []
+    
     var startDate: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNameFromAuth()
         let uid = (Auth.auth().currentUser?.uid)!
-        //set notifications
+        
+        //set name
+        FirebaseService.getName(uid: uid) { name in
+            if (name != "error"){
+                self.homeVC_hello_lbl.text = "היי \(String(describing: name))!"
+            }
+        }
+        
+        //set user notifications
         MyNotificationService.askPermissions { granted in
             if (granted == 1){
-                self.getLastDonation { result in
+                FirebaseService.getLastDonation { result in
                     MyNotificationService.registerNotification(userAuthId: uid, lastDonation: result)
                 }
             }
@@ -78,58 +84,6 @@ class HomeViewController: UIViewController {
         //self.dismiss(animated: true, completion: nil)
     }
     
-    //set name at helloLabel
-    func setNameFromAuth (){
-        let userAuthID = Auth.auth().currentUser?.uid
-        let db = Firestore.firestore()
-        db.collection("users").document(userAuthID!).getDocument { (document, error) in
-            if error == nil{
-                if document != nil && document!.exists{
-                    let documentData = document!.data()
-                    let optionalName = documentData?["firstName"]
-                    //let optionalPhone = documentData?["phone"]
-                    let name = optionalName!
-                    self.homeVC_hello_lbl.text = "היי \(String(describing: name))!"
-                }
-            }
-            else{
-                print("error")
-            }
-        }
-    }
-    
-    func getLastDonation (_ completion: @escaping (_ result: String) -> Void) {
-        let uid = (Auth.auth().currentUser?.uid)!
-        var lastDonation = ""
-        getDonationsArr(userAuthID: uid) { allDoantionsStr in
-            if (allDoantionsStr.count > 0) {
-                lastDonation = allDoantionsStr[allDoantionsStr.count-1]
-                print("last in getLastDonation :"+lastDonation)
-                completion(lastDonation)
-            }
-            else {
-                completion("")
-            }
-        }
-    }
-    
-    func getDonationsArr (userAuthID : String, _ completion: @escaping (_ arr: [String]) -> Void){
-        let db = Firestore.firestore()
-        db.collection("users").document(userAuthID).getDocument { (document, error) in
-            if let document = document {
-                self.allDonations = document["donations"] as? Array ?? []
-                for donate in self.allDonations {
-                    let cityDate = donate.split(separator: ",")
-                    let datePart = cityDate[1].split(separator: ":")
-                    let date = datePart[1].trimmingCharacters(in: .whitespacesAndNewlines)
-                    //let hebrewStr = "עיר: " + city + " " + "תאריך: " + date
-                    print("date inside get:"+date)
-                    self.allDoantionsStr.append(date)
-                }
-            }
-            completion(self.allDoantionsStr)
-        }
-    }
 }
 
 
