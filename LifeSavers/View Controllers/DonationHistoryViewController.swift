@@ -75,6 +75,18 @@ class DonationHistoryViewController : UIViewController,UITableViewDelegate, UITa
             self.allDoantionsStr = allDoantionsStrCompletion
             self.donationTable.reloadData()
         }
+        //need to check if a newer donation added
+        MyNotificationService.askPermissions { granted in
+            if (granted == 1){
+                FirebaseService.getLastDonation { result in
+                    print("inside add donate , res is:" + result)
+                    MyNotificationService.registerNotification(userAuthId: uid, lastDonation: result)
+                }
+            }
+            if (granted == -1){
+                print("permission denied..")
+            }
+        }
     }
     
     @IBAction func goToHomeAction(_ sender: Any) {

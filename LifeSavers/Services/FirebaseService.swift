@@ -13,7 +13,8 @@ class FirebaseService {
     static var allDonations : [String] = []
     static var allDoantionsStr : [String] = []
     static var allDatesStr : [String] = []
-    
+    static var allDates : [Date] = []
+
     static func getName(uid: String, completion: @escaping (_ name: String) -> Void){
         let db = Firestore.firestore()
         db.collection("users").document(uid).getDocument { (document, error) in
@@ -35,10 +36,11 @@ class FirebaseService {
     static func getLastDonation (_ completion: @escaping (_ result: String) -> Void) {
         let uid = (Auth.auth().currentUser?.uid)!
         var lastDonation = ""
-        getDatesArr(userAuthID: uid) { allDatesStr in
-            if (allDatesStr.count > 0) {
-                lastDonation = allDatesStr[allDatesStr.count-1]
-                print("last in getLastDonation :"+lastDonation)
+        getMostRecentDate(userAuthID: uid) {mostRecent in
+            if (mostRecent != "") {
+                lastDonation = mostRecent
+                print("last in getLastDonation :")
+                print(lastDonation)
                 completion(lastDonation)
             }
             else {
@@ -68,7 +70,9 @@ class FirebaseService {
         }
     }
     
-    static func getDatesArr (userAuthID : String, _ completion: @escaping (_ arr: [String]) -> Void){
+    static func getMostRecentDate (userAuthID : String, _ completion: @escaping (_ recentDate: String) -> Void){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         let db = Firestore.firestore()
         db.collection("users").document(userAuthID).getDocument { (document, error) in
             if let document = document {
@@ -78,10 +82,19 @@ class FirebaseService {
                     let datePart = cityDate[1].split(separator: ":")
                     let date = datePart[1].trimmingCharacters(in: .whitespacesAndNewlines)
                     print("date inside get:"+date)
-                    self.allDatesStr.append(date)
+                    //self.allDatesStr.append(date)
+                    self.allDates.append(dateFormatter.date(from: date)!)
                 }
             }
-            completion(self.allDatesStr)
+            if (self.allDates.count >= 0){
+                let mostRecentDate = self.allDates.max(by: {
+                   $0.timeIntervalSinceReferenceDate < $1.timeIntervalSinceReferenceDate
+                })
+                completion(dateFormatter.string(from: mostRecentDate!))
+            }
+            else {
+                completion("")
+            }
         }
     }
     static func loginUser(userEmail: String, userPassword: String, rememberMe: Bool, completion: @escaping (_ result: String, _ err: Bool) -> Void){
