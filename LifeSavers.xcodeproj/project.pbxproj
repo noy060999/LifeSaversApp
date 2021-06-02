@@ -25,6 +25,7 @@
 		21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F93B7124B79DFF00BC5F47 /* Const.swift */; };
 		B769B125AB95F1C3C71B3B93 /* Pods_LifeSavers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */; };
 		C017CDA22646B43000325847 /* PopupWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017CDA12646B43000325847 /* PopupWindow.swift */; };
+		C02C34E42667DCB50094EB27 /* MyNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02C34E32667DCB50094EB27 /* MyNotificationService.swift */; };
 		C0A06FC526511EC90098B6D5 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A06FC426511EC90098B6D5 /* Extenstions.swift */; };
 		C0AE8910264D44C700774DA3 /* QuastianireViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */; };
 		C0AE8912264D503D00774DA3 /* QusatianireViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */; };
@@ -55,6 +56,7 @@
 		9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSavers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1502CC200DEC5190A156C6B /* Pods-LifeSavers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.release.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.release.xcconfig"; sourceTree = "<group>"; };
 		C017CDA12646B43000325847 /* PopupWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupWindow.swift; sourceTree = "<group>"; };
+		C02C34E32667DCB50094EB27 /* MyNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotificationService.swift; sourceTree = "<group>"; };
 		C089348E26428A3400599A2C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A06FC426511EC90098B6D5 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuastianireViewController2.swift; sourceTree = "<group>"; };
@@ -100,6 +102,8 @@
 		21240C1C24B485AD00A24390 /* LifeSavers */ = {
 			isa = PBXGroup;
 			children = (
+				C02C34E22667DC8A0094EB27 /* PopupWindows */,
+				C02C34E12667DC7C0094EB27 /* Services */,
 				21F93B7424B7C8A700BC5F47 /* Helpers */,
 				21F93B7324B7C88C00BC5F47 /* View Controllers */,
 				21240C1D24B485AD00A24390 /* AppDelegate.swift */,
@@ -123,11 +127,9 @@
 				21240C4124B4AE0100A24390 /* HomeViewController.swift */,
 				21240C4324B4B27800A24390 /* ActivePositionsViewController.swift */,
 				21240C4524B4B29100A24390 /* MyProfileViewController.swift */,
-				C017CDA12646B43000325847 /* PopupWindow.swift */,
 				C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */,
 				C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */,
 				C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */,
-				C0B4F4C62652AA610051542E /* AddDoantePopup.swift */,
 				C0F987572652FDB5008E829C /* DonationHistoryViewController.swift */,
 			);
 			path = "View Controllers";
@@ -151,6 +153,23 @@
 				A1502CC200DEC5190A156C6B /* Pods-LifeSavers.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C02C34E12667DC7C0094EB27 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C02C34E32667DCB50094EB27 /* MyNotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C02C34E22667DC8A0094EB27 /* PopupWindows */ = {
+			isa = PBXGroup;
+			children = (
+				C0B4F4C62652AA610051542E /* AddDoantePopup.swift */,
+				C017CDA12646B43000325847 /* PopupWindow.swift */,
+			);
+			path = PopupWindows;
 			sourceTree = "<group>";
 		};
 		CE2AEB83AD3032B340C0EF82 /* Frameworks */ = {
@@ -278,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02C34E42667DCB50094EB27 /* MyNotificationService.swift in Sources */,
 				C0A06FC526511EC90098B6D5 /* Extenstions.swift in Sources */,
 				21240C3A24B4A95200A24390 /* SignInViewController.swift in Sources */,
 				21240C4424B4B27800A24390 /* ActivePositionsViewController.swift in Sources */,
