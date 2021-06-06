@@ -43,6 +43,7 @@ class ChartService{
         }
     }
     
+    
     static func adjustChartFrame(pieChart: PieChartView, superView: UIView){
         pieChart.frame = CGRect(x: 0, y: 0, width: superView.frame.size.width, height: superView.frame.size.width)
         pieChart.center = superView.center

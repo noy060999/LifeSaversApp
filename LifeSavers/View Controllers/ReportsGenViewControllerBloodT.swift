@@ -8,13 +8,18 @@
 
 import UIKit
 import Charts
+import Firebase
+import MessageUI
 
-class ReportsGenViewControllerBloodT: UIViewController, ChartViewDelegate {
+class ReportsGenViewControllerBloodT: UIViewController, ChartViewDelegate, MFMailComposeViewControllerDelegate {
     
+    
+    @IBOutlet weak var sendMailBtn: UIButton!
     var pieChart = PieChartView()
     override func viewDidLoad() {
         super.viewDidLoad()
         pieChart.delegate = self
+        sendMailBtn.customBtnSignIn()
     }
     
     override func viewDidLayoutSubviews() {
@@ -30,5 +35,31 @@ class ReportsGenViewControllerBloodT: UIViewController, ChartViewDelegate {
     
     @IBAction func goHomeAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func sendMailAction(_ sender: Any) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            var body = ""
+            mail.mailComposeDelegate = self
+            var recip : [String] = []
+            recip.append((Auth.auth().currentUser?.email)!)
+            mail.setToRecipients(recip)
+            FirebaseService.getEmailBody(category: "bloodType") { msg in
+                if (msg != ""){
+                    print(msg)
+                    body = msg
+                    mail.setMessageBody("<p>"+body+"</p>", isHTML: true)
+                }
+                else {
+                    mail.setMessageBody("<p>No Data.</p>", isHTML: true)
+                }
+                mail.setSubject("תרומות דם לפי סוג דם")
+                self.present(mail, animated: true)
+            }
+        } else {
+            print("cannot send email!")
+        }
     }
 }

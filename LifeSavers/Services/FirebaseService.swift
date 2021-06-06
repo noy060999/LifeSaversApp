@@ -50,6 +50,35 @@ class FirebaseService {
         }
     }
     
+    static func getEmailBody (category: String ,_ completion: @escaping (_ str: String) -> Void){
+        var messageBody = ""
+        self.getFullDonationsFromAllUsers { allDonationsAllusers in
+            if (allDonationsAllusers.count > 0){
+                self.getArrByCategory(category: category, donations: allDonationsAllusers) { categoryArr in
+                    if (categoryArr.count > 0){
+                        self.countByCategories(fullDonationsByCategory: categoryArr) { countsDict in
+                            if (countsDict.count > 0){
+                                for (key, value) in countsDict{
+                                    messageBody += key + " : " + String(value) + "\n"
+                                }
+                                completion(messageBody)
+                            }
+                            else {
+                                completion("")
+                            }
+                        }
+                    }else {
+                        completion("")
+                    }
+                }
+            }
+            else {
+                completion("")
+            }
+        }
+        
+    }
+    
     static func getArrByCategory (category: String, donations: [Donation], _ completion: @escaping (_ arr: [String]) -> Void){
         var donateByCatergory : [String] = []
         let dateFormatter = DateFormatter()

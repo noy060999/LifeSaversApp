@@ -1043,19 +1043,33 @@
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flV-ov-zFw">
+                                <rect key="frame" x="30" y="730" width="354" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="שלח דוח באימייל"/>
+                                <connections>
+                                    <action selector="sendMailAction:" destination="t1T-v8-ytY" eventType="touchUpInside" id="Jhp-vD-Vmg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U8j-IK-OCh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="U8j-IK-OCh" firstAttribute="trailing" secondItem="flV-ov-zFw" secondAttribute="trailing" constant="30" id="9t1-sI-oxQ"/>
                             <constraint firstItem="fps-rq-DHv" firstAttribute="top" secondItem="U8j-IK-OCh" secondAttribute="top" constant="50" id="E6U-1X-HUn"/>
+                            <constraint firstItem="flV-ov-zFw" firstAttribute="leading" secondItem="U8j-IK-OCh" secondAttribute="leading" constant="30" id="KK4-CO-1vv"/>
                             <constraint firstItem="fz7-Zb-gmu" firstAttribute="leading" secondItem="U8j-IK-OCh" secondAttribute="leading" constant="30" id="UTX-Ul-Qjm"/>
                             <constraint firstItem="fz7-Zb-gmu" firstAttribute="top" secondItem="U8j-IK-OCh" secondAttribute="top" constant="15" id="gOn-xL-sEC"/>
                             <constraint firstItem="fps-rq-DHv" firstAttribute="leading" secondItem="U8j-IK-OCh" secondAttribute="leading" id="pcY-SU-kAh"/>
+                            <constraint firstItem="U8j-IK-OCh" firstAttribute="bottom" secondItem="flV-ov-zFw" secondAttribute="bottom" constant="50" id="sst-uT-Ekj"/>
                             <constraint firstAttribute="trailing" secondItem="fps-rq-DHv" secondAttribute="trailing" id="yDg-OM-Dyy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="עיר" id="vWW-ht-83y"/>
                     <navigationItem key="navigationItem" title="התפלגות תרומות לפי עיר" id="HQr-rS-W2q"/>
+                    <connections>
+                        <outlet property="sendMailBtn" destination="flV-ov-zFw" id="Pso-3T-imD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0k-Ip-CW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1082,19 +1096,33 @@
                                     <action selector="goToHomeAction:" destination="v72-WR-h4C" eventType="touchUpInside" id="k1a-jZ-NbS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6V-ed-INh">
+                                <rect key="frame" x="30" y="730" width="354" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="שלח דוח באימייל"/>
+                                <connections>
+                                    <action selector="sendMailAction:" destination="v72-WR-h4C" eventType="touchUpInside" id="TGN-PC-s8u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Fd-ab-Mnt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Fd-ab-Mnt" firstAttribute="trailing" secondItem="4j5-0p-8v7" secondAttribute="trailing" id="I3E-Tk-hOW"/>
+                            <constraint firstItem="6Fd-ab-Mnt" firstAttribute="bottom" secondItem="U6V-ed-INh" secondAttribute="bottom" constant="50" id="JZ8-ph-Zco"/>
+                            <constraint firstItem="U6V-ed-INh" firstAttribute="leading" secondItem="6Fd-ab-Mnt" secondAttribute="leading" constant="30" id="LfR-le-eo5"/>
                             <constraint firstItem="4j5-0p-8v7" firstAttribute="leading" secondItem="6Fd-ab-Mnt" secondAttribute="leading" id="Mx0-ia-bO8"/>
                             <constraint firstItem="dZe-FW-NCD" firstAttribute="top" secondItem="6Fd-ab-Mnt" secondAttribute="top" constant="15" id="P81-qs-b2t"/>
+                            <constraint firstItem="6Fd-ab-Mnt" firstAttribute="trailing" secondItem="U6V-ed-INh" secondAttribute="trailing" constant="30" id="T95-07-Bgo"/>
                             <constraint firstItem="dZe-FW-NCD" firstAttribute="leading" secondItem="6Fd-ab-Mnt" secondAttribute="leading" constant="30" id="Xvg-Js-CFO"/>
                             <constraint firstItem="4j5-0p-8v7" firstAttribute="top" secondItem="6Fd-ab-Mnt" secondAttribute="top" constant="50" id="yKY-Ui-LNj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="מין" id="24y-sL-Pwv"/>
                     <navigationItem key="navigationItem" title="התפלגות תרומות לפי מין" id="CzP-cd-pFR"/>
+                    <connections>
+                        <outlet property="sendMailBtn" destination="U6V-ed-INh" id="HAK-DH-pVL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5C-TD-zdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1121,12 +1149,23 @@
                                     <action selector="goHomeBtn:" destination="8W1-P0-hoL" eventType="touchUpInside" id="tKA-Wf-4Lz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBq-t4-kEN">
+                                <rect key="frame" x="30" y="730" width="354" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="שלח דוח באימייל"/>
+                                <connections>
+                                    <action selector="sendMailAction:" destination="8W1-P0-hoL" eventType="touchUpInside" id="B6C-W1-vWH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZM9-rj-a9K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0S7-OT-pfr" firstAttribute="top" secondItem="ZM9-rj-a9K" secondAttribute="top" constant="50" id="5Vx-1F-ycH"/>
+                            <constraint firstItem="EBq-t4-kEN" firstAttribute="leading" secondItem="ZM9-rj-a9K" secondAttribute="leading" constant="30" id="JNc-uj-JcU"/>
                             <constraint firstItem="ZM9-rj-a9K" firstAttribute="trailing" secondItem="0S7-OT-pfr" secondAttribute="trailing" id="Y8J-T4-ob4"/>
+                            <constraint firstItem="ZM9-rj-a9K" firstAttribute="trailing" secondItem="EBq-t4-kEN" secondAttribute="trailing" constant="30" id="dTB-a7-G8t"/>
+                            <constraint firstItem="ZM9-rj-a9K" firstAttribute="bottom" secondItem="EBq-t4-kEN" secondAttribute="bottom" constant="50" id="knY-V9-J6j"/>
                             <constraint firstItem="0S7-OT-pfr" firstAttribute="leading" secondItem="ZM9-rj-a9K" secondAttribute="leading" id="nZz-9W-lFR"/>
                             <constraint firstItem="dnd-1k-bbT" firstAttribute="leading" secondItem="ZM9-rj-a9K" secondAttribute="leading" constant="30" id="oL6-WP-RkO"/>
                             <constraint firstItem="dnd-1k-bbT" firstAttribute="top" secondItem="ZM9-rj-a9K" secondAttribute="top" constant="15" id="qVp-3E-3Sw"/>
@@ -1134,6 +1173,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="תאריך" id="XAx-em-XYc"/>
                     <navigationItem key="navigationItem" title="התפלגות תרומות לפי תאריך" id="odK-P7-eSN"/>
+                    <connections>
+                        <outlet property="sendMailBtn" destination="EBq-t4-kEN" id="ObI-yt-BzZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81Y-ec-1wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1160,13 +1202,24 @@
                                     <action selector="goHomeAction:" destination="cLX-6I-CmR" eventType="touchUpInside" id="tXW-20-E6w"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjE-rq-mpY">
+                                <rect key="frame" x="30" y="729" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="שלח דוח באימייל"/>
+                                <connections>
+                                    <action selector="sendMailAction:" destination="cLX-6I-CmR" eventType="touchUpInside" id="Tvj-ze-d63"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gf2-qj-Gcv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rgR-hR-x30" firstAttribute="top" secondItem="Gf2-qj-Gcv" secondAttribute="top" constant="15" id="429-Dg-YfT"/>
+                            <constraint firstItem="rjE-rq-mpY" firstAttribute="leading" secondItem="Gf2-qj-Gcv" secondAttribute="leading" constant="30" id="44e-jY-9nM"/>
                             <constraint firstItem="gk2-3h-t1O" firstAttribute="top" secondItem="Gf2-qj-Gcv" secondAttribute="top" constant="50" id="Cne-AN-6sV"/>
+                            <constraint firstItem="Gf2-qj-Gcv" firstAttribute="trailing" secondItem="rjE-rq-mpY" secondAttribute="trailing" constant="30" id="ZNu-Bd-gxp"/>
                             <constraint firstItem="gk2-3h-t1O" firstAttribute="centerX" secondItem="rKg-Uf-WIX" secondAttribute="centerX" id="b7I-UH-Vfi"/>
+                            <constraint firstItem="Gf2-qj-Gcv" firstAttribute="bottom" secondItem="rjE-rq-mpY" secondAttribute="bottom" constant="50" id="i0H-R5-rJx"/>
                             <constraint firstItem="Gf2-qj-Gcv" firstAttribute="trailing" secondItem="gk2-3h-t1O" secondAttribute="trailing" id="kje-W3-cNe"/>
                             <constraint firstItem="rgR-hR-x30" firstAttribute="leading" secondItem="Gf2-qj-Gcv" secondAttribute="leading" constant="30" id="mlz-do-wb2"/>
                             <constraint firstItem="gk2-3h-t1O" firstAttribute="leading" secondItem="Gf2-qj-Gcv" secondAttribute="leading" id="wB7-TC-wKM"/>
@@ -1174,6 +1227,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="סוג דם" id="TvU-Fg-fMs"/>
                     <navigationItem key="navigationItem" title="התפלגות תרומות לפי סוג דם" id="bLn-rI-o3t"/>
+                    <connections>
+                        <outlet property="sendMailBtn" destination="rjE-rq-mpY" id="FTp-80-Xph"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViG-jD-8El" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

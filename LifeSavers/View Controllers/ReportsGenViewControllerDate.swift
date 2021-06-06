@@ -9,9 +9,12 @@
 import UIKit
 import Charts
 import Firebase
+import MessageUI
 
-//city, gender, bloodType, date
-class ReportsGenViewControllerDate: UIViewController, ChartViewDelegate{
+class ReportsGenViewControllerDate: UIViewController, ChartViewDelegate, MFMailComposeViewControllerDelegate{
+    
+    
+    @IBOutlet weak var sendMailBtn: UIButton!
     
     
     var pieChart = PieChartView()
@@ -19,6 +22,7 @@ class ReportsGenViewControllerDate: UIViewController, ChartViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         pieChart.delegate = self
+        sendMailBtn.customBtnSignIn()
     }
     
     override func viewDidLayoutSubviews() {
@@ -35,5 +39,39 @@ class ReportsGenViewControllerDate: UIViewController, ChartViewDelegate{
         navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func sendMailAction(_ sender: Any) {
+        //for testing only.
+        /*FirebaseService.getEmailBody(category: "date") { msg in
+            if (msg != ""){
+                print(msg)
+            }
+            else {
+            }
+        }*/
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            var body = ""
+            mail.mailComposeDelegate = self
+            var recip : [String] = []
+            recip.append((Auth.auth().currentUser?.email)!)
+            mail.setToRecipients(recip)
+            FirebaseService.getEmailBody(category: "date") { msg in
+                if (msg != ""){
+                    print(msg)
+                    body = msg
+                    mail.setMessageBody("<p>"+body+"</p>", isHTML: true)
+                }
+                else {
+                    mail.setMessageBody("<p>No Data.</p>", isHTML: true)
+                }
+                mail.setSubject("תרומות דם לפי תאריך")
+                self.present(mail, animated: true)
+            }
+            
+        } else {
+            print("cannot send email!")
+        }
+    }
     
 }
