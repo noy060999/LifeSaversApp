@@ -124,7 +124,7 @@ class FirebaseService {
         
         for val in countedSet{
             let count = countedSet.count(for: val)
-            print(countedSet.count(for: val))
+            //print(countedSet.count(for: val))
             counts[val as! String] = count
         }
         
@@ -147,7 +147,7 @@ class FirebaseService {
                     let cityDate = donate.split(separator: ",")
                     let datePart = cityDate[1].split(separator: ":")
                     let date = datePart[1].trimmingCharacters(in: .whitespacesAndNewlines)
-                    print("date inside get:"+date)
+                    //print("date inside get:"+date)
                     //self.allDatesStr.append(date)
                     self.allDates.append(dateFormatter.date(from: date)!)
                 }
@@ -178,7 +178,7 @@ class FirebaseService {
                 for document in querySnapshot!.documents {
                     self.allDonations.removeAll()
                     self.allDonations = document["donations"] as? Array ?? []
-                    print(self.allDonations)
+                    //print(self.allDonations)
                     for donate in self.allDonations {
                         let cityDate = donate.split(separator: ",")
                         let cityPart = cityDate[0].split(separator: ":")
@@ -197,6 +197,7 @@ class FirebaseService {
                 }
                 else {
                     completion([])
+                    print("no donations!")
                 }
             }
         }
