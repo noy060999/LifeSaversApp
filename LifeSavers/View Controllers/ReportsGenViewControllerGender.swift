@@ -25,4 +25,9 @@ class ReportsGenViewControllerGender: UIViewController, ChartViewDelegate {
         
         ChartService.genChart(pieChart: pieChart, chartCategory: category)
     }
+    
+    
+    @IBAction func goToHomeAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }

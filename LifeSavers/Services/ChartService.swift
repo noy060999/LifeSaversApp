@@ -12,6 +12,7 @@ import Charts
 class ChartService{
     static func genChart(pieChart: PieChartView, chartCategory: String){
         var entries = [PieChartDataEntry]()
+        entries.removeAll()
         FirebaseService.getFullDonationsFromAllUsers() { fullDonations in
             for don in fullDonations {
                 print(don.description)

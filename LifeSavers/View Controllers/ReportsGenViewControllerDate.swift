@@ -13,7 +13,7 @@ import Firebase
 //city, gender, bloodType, date
 class ReportsGenViewControllerDate: UIViewController, ChartViewDelegate{
     
-    @IBOutlet weak var goHomeBtn: UIBarButtonItem!
+    
     var pieChart = PieChartView()
     
     override func viewDidLoad() {
@@ -31,6 +31,9 @@ class ReportsGenViewControllerDate: UIViewController, ChartViewDelegate{
         ChartService.genChart(pieChart: pieChart, chartCategory: category)
     }
     
+    @IBAction func goHomeBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     
 }

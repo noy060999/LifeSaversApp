@@ -31,10 +31,10 @@ class AdminViewController: UIViewController {
         }
     }
     
-    /*@IBAction func gotoReportsAction(_ sender: Any) {
-        let reportsVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.genBydateVC) as? ReportsGenViewControllerDate
-        navigationController?.pushViewController(reportsVC!, animated: true)
-    }*/
+    @IBAction func gotoReportsAction(_ sender: Any) {
+        let tabBarVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.tabBarController) as? UITabBarController
+        navigationController?.pushViewController(tabBarVC!, animated: true)
+    }
     
     
     @IBAction func logoutAction(_ sender: Any) {

@@ -167,15 +167,18 @@ class FirebaseService {
     static func getFullDonationsFromAllUsers (_ completion: @escaping (_ arr: [Donation]) -> Void){
         let db = Firestore.firestore()
         self.fullDonations.removeAll()
+        self.allDonations.removeAll()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         db.collection("users").getDocuments() {querySnapshot,err in
+            self.fullDonations.removeAll()
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
                     self.allDonations.removeAll()
                     self.allDonations = document["donations"] as? Array ?? []
+                    print(self.allDonations)
                     for donate in self.allDonations {
                         let cityDate = donate.split(separator: ",")
                         let cityPart = cityDate[0].split(separator: ":")

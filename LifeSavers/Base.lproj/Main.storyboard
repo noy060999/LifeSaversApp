@@ -78,7 +78,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="bPJ-9C-0Py"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="qNQ-IV-hrL">
                                                 <rect key="frame" x="20" y="332" width="373" height="31"/>
@@ -192,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLH-oA-2oU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="856"/>
+            <point key="canvasLocation" x="2900" y="855.80357142857144"/>
         </scene>
         <!--MainViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -457,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clG-OA-d4r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576.811594202899" y="855.80357142857144"/>
+            <point key="canvasLocation" x="4397.1014492753629" y="855.80357142857144"/>
         </scene>
         <!--MyProfileViewController-->
         <scene sceneID="3Y1-y9-jws">
@@ -982,7 +982,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5U-OO-oTN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776.8115942028987" y="855.80357142857144"/>
+            <point key="canvasLocation" x="3597.1014492753625" y="855.80357142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ITL-WN-Fag">
@@ -1012,187 +1012,172 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9Hx-If-UWj" kind="relationship" relationship="viewControllers" id="D7M-wE-5A4"/>
-                        <segue destination="9gy-i4-mbl" kind="relationship" relationship="viewControllers" id="yqq-5D-jFb"/>
-                        <segue destination="6in-TF-zBw" kind="relationship" relationship="viewControllers" id="6yl-dm-JPT"/>
-                        <segue destination="EpR-qe-bKX" kind="relationship" relationship="viewControllers" id="O0W-wo-Hoy"/>
+                        <segue destination="8W1-P0-hoL" kind="relationship" relationship="viewControllers" id="oqy-Qc-iaw"/>
+                        <segue destination="v72-WR-h4C" kind="relationship" relationship="viewControllers" id="bYf-3z-zKG"/>
+                        <segue destination="t1T-v8-ytY" kind="relationship" relationship="viewControllers" id="hqS-bu-q6d"/>
+                        <segue destination="cLX-6I-CmR" kind="relationship" relationship="viewControllers" id="cXK-3O-Rha"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shr-qn-M6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-707" y="638"/>
+            <point key="canvasLocation" x="997.10144927536237" y="942.85714285714278"/>
         </scene>
         <!--התפלגות תרומות לפי עיר-->
         <scene sceneID="J7V-e1-Gkw">
             <objects>
                 <viewController storyboardIdentifier="genByCityVC" id="t1T-v8-ytY" customClass="ReportsGenViewControllerCity" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Xv-uH-IrW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fz7-Zb-gmu">
-                                <rect key="frame" x="30" y="71" width="78" height="22"/>
+                                <rect key="frame" x="30" y="59" width="78" height="22"/>
                                 <state key="normal" title="Button" image="house.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="goHomeAction:" destination="t1T-v8-ytY" eventType="touchUpInside" id="jNM-cH-p6y"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="התפלגות תרומות לפי עיר" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fps-rq-DHv">
+                                <rect key="frame" x="0.0" y="94" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U8j-IK-OCh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fps-rq-DHv" firstAttribute="top" secondItem="U8j-IK-OCh" secondAttribute="top" constant="50" id="E6U-1X-HUn"/>
                             <constraint firstItem="fz7-Zb-gmu" firstAttribute="leading" secondItem="U8j-IK-OCh" secondAttribute="leading" constant="30" id="UTX-Ul-Qjm"/>
                             <constraint firstItem="fz7-Zb-gmu" firstAttribute="top" secondItem="U8j-IK-OCh" secondAttribute="top" constant="15" id="gOn-xL-sEC"/>
+                            <constraint firstItem="fps-rq-DHv" firstAttribute="leading" secondItem="U8j-IK-OCh" secondAttribute="leading" id="pcY-SU-kAh"/>
+                            <constraint firstAttribute="trailing" secondItem="fps-rq-DHv" secondAttribute="trailing" id="yDg-OM-Dyy"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="עיר" id="vWW-ht-83y"/>
                     <navigationItem key="navigationItem" title="התפלגות תרומות לפי עיר" id="HQr-rS-W2q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0k-Ip-CW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3626" y="943"/>
+            <point key="canvasLocation" x="-2003" y="955"/>
         </scene>
         <!--התפלגות תרומות לפי מין-->
         <scene sceneID="9S0-yp-F9Q">
             <objects>
                 <viewController storyboardIdentifier="genByGenderVC" id="v72-WR-h4C" customClass="ReportsGenViewControllerGender" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WFk-jK-u33">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="התפלגות תרומות לפי מין" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j5-0p-8v7">
+                                <rect key="frame" x="0.0" y="94" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZe-FW-NCD">
-                                <rect key="frame" x="30" y="71" width="78" height="22"/>
+                                <rect key="frame" x="30" y="59" width="78" height="22"/>
                                 <state key="normal" title="Button" image="house.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="goToHomeAction:" destination="v72-WR-h4C" eventType="touchUpInside" id="k1a-jZ-NbS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Fd-ab-Mnt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Fd-ab-Mnt" firstAttribute="trailing" secondItem="4j5-0p-8v7" secondAttribute="trailing" id="I3E-Tk-hOW"/>
+                            <constraint firstItem="4j5-0p-8v7" firstAttribute="leading" secondItem="6Fd-ab-Mnt" secondAttribute="leading" id="Mx0-ia-bO8"/>
                             <constraint firstItem="dZe-FW-NCD" firstAttribute="top" secondItem="6Fd-ab-Mnt" secondAttribute="top" constant="15" id="P81-qs-b2t"/>
                             <constraint firstItem="dZe-FW-NCD" firstAttribute="leading" secondItem="6Fd-ab-Mnt" secondAttribute="leading" constant="30" id="Xvg-Js-CFO"/>
+                            <constraint firstItem="4j5-0p-8v7" firstAttribute="top" secondItem="6Fd-ab-Mnt" secondAttribute="top" constant="50" id="yKY-Ui-LNj"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="מין" id="24y-sL-Pwv"/>
                     <navigationItem key="navigationItem" title="התפלגות תרומות לפי מין" id="CzP-cd-pFR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5C-TD-zdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2971" y="943"/>
+            <point key="canvasLocation" x="-1290" y="955"/>
         </scene>
         <!--התפלגות תרומות לפי תאריך-->
         <scene sceneID="l8L-S3-hmk">
             <objects>
                 <viewController storyboardIdentifier="genByDateVC" id="8W1-P0-hoL" customClass="ReportsGenViewControllerDate" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C31-hm-X9o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="התפלגות תרומות לפי תאריך" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0S7-OT-pfr">
+                                <rect key="frame" x="0.0" y="94" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnd-1k-bbT">
-                                <rect key="frame" x="30" y="71" width="78" height="22"/>
+                                <rect key="frame" x="30" y="59" width="78" height="22"/>
                                 <state key="normal" title="Button" image="house.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="goHomeBtn:" destination="8W1-P0-hoL" eventType="touchUpInside" id="tKA-Wf-4Lz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZM9-rj-a9K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0S7-OT-pfr" firstAttribute="top" secondItem="ZM9-rj-a9K" secondAttribute="top" constant="50" id="5Vx-1F-ycH"/>
+                            <constraint firstItem="ZM9-rj-a9K" firstAttribute="trailing" secondItem="0S7-OT-pfr" secondAttribute="trailing" id="Y8J-T4-ob4"/>
+                            <constraint firstItem="0S7-OT-pfr" firstAttribute="leading" secondItem="ZM9-rj-a9K" secondAttribute="leading" id="nZz-9W-lFR"/>
                             <constraint firstItem="dnd-1k-bbT" firstAttribute="leading" secondItem="ZM9-rj-a9K" secondAttribute="leading" constant="30" id="oL6-WP-RkO"/>
                             <constraint firstItem="dnd-1k-bbT" firstAttribute="top" secondItem="ZM9-rj-a9K" secondAttribute="top" constant="15" id="qVp-3E-3Sw"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="תאריך" id="XAx-em-XYc"/>
                     <navigationItem key="navigationItem" title="התפלגות תרומות לפי תאריך" id="odK-P7-eSN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81Y-ec-1wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2316" y="943"/>
+            <point key="canvasLocation" x="-554" y="955"/>
         </scene>
         <!--התפלגות תרומות לפי סוג דם-->
         <scene sceneID="dj6-zc-MIz">
             <objects>
                 <viewController storyboardIdentifier="genByBloodtypeVC" id="cLX-6I-CmR" customClass="ReportsGenViewControllerBloodT" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rKg-Uf-WIX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="התפלגות תרומות לפי סוג דם" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk2-3h-t1O">
+                                <rect key="frame" x="0.0" y="94" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgR-hR-x30">
-                                <rect key="frame" x="30" y="71" width="78" height="22"/>
+                                <rect key="frame" x="30" y="59" width="78" height="22"/>
                                 <state key="normal" title="Button" image="house.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="goHomeAction:" destination="cLX-6I-CmR" eventType="touchUpInside" id="tXW-20-E6w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gf2-qj-Gcv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rgR-hR-x30" firstAttribute="top" secondItem="Gf2-qj-Gcv" secondAttribute="top" constant="15" id="429-Dg-YfT"/>
+                            <constraint firstItem="gk2-3h-t1O" firstAttribute="top" secondItem="Gf2-qj-Gcv" secondAttribute="top" constant="50" id="Cne-AN-6sV"/>
+                            <constraint firstItem="gk2-3h-t1O" firstAttribute="centerX" secondItem="rKg-Uf-WIX" secondAttribute="centerX" id="b7I-UH-Vfi"/>
+                            <constraint firstItem="Gf2-qj-Gcv" firstAttribute="trailing" secondItem="gk2-3h-t1O" secondAttribute="trailing" id="kje-W3-cNe"/>
                             <constraint firstItem="rgR-hR-x30" firstAttribute="leading" secondItem="Gf2-qj-Gcv" secondAttribute="leading" constant="30" id="mlz-do-wb2"/>
+                            <constraint firstItem="gk2-3h-t1O" firstAttribute="leading" secondItem="Gf2-qj-Gcv" secondAttribute="leading" id="wB7-TC-wKM"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="סוג דם" id="TvU-Fg-fMs"/>
                     <navigationItem key="navigationItem" title="התפלגות תרומות לפי סוג דם" id="bLn-rI-o3t"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViG-jD-8El" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1607" y="955"/>
-        </scene>
-        <!--תאריך-->
-        <scene sceneID="MCA-J2-lJc">
-            <objects>
-                <navigationController id="6in-TF-zBw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="תאריך" id="XZ2-0e-2eb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rEp-yC-hmB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="8W1-P0-hoL" kind="relationship" relationship="rootViewController" id="04T-dU-spy"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WtM-FS-PXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2316" y="305"/>
-        </scene>
-        <!--מין-->
-        <scene sceneID="abt-ZG-65M">
-            <objects>
-                <navigationController id="9gy-i4-mbl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="מין" id="ozm-dD-oP5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gsc-8y-SDy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="v72-WR-h4C" kind="relationship" relationship="rootViewController" id="cGR-yQ-EP7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hxu-NA-VmL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2971" y="305"/>
-        </scene>
-        <!--עיר-->
-        <scene sceneID="cCa-Ck-oSd">
-            <objects>
-                <navigationController id="9Hx-If-UWj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="עיר" id="O63-r5-iNV"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qYt-AK-bMf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="t1T-v8-ytY" kind="relationship" relationship="rootViewController" id="dit-k0-rmD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cPe-xg-zNf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3623" y="305"/>
-        </scene>
-        <!--סוג דם-->
-        <scene sceneID="uLO-lk-RNi">
-            <objects>
-                <navigationController id="EpR-qe-bKX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="סוג דם" id="gMj-Sj-DWb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRc-W3-cNP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="cLX-6I-CmR" kind="relationship" relationship="rootViewController" id="7Cx-cK-fbT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Bs-Rd-Vsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1607" y="304"/>
+            <point key="canvasLocation" x="213.04347826086959" y="954.91071428571422"/>
         </scene>
         <!--AdminViewController-->
         <scene sceneID="F9C-pm-Wgt">
@@ -1233,7 +1218,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="report-icon"/>
                                         <connections>
-                                            <segue destination="bOB-yC-vjw" kind="show" id="oMc-jo-mxj"/>
+                                            <action selector="gotoReportsAction:" destination="E9O-Ii-g2f" eventType="touchUpInside" id="CfZ-Fp-4iZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1283,7 +1268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tns-Hm-Je1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221.73913043478262" y="855.80357142857144"/>
+            <point key="canvasLocation" x="2042.0289855072465" y="855.80357142857144"/>
         </scene>
         <!--QuestanireViewController1-->
         <scene sceneID="2lh-FM-4F8">
@@ -1759,7 +1744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9An-VA-ouP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3242.0289855072465" y="782.8125"/>
+            <point key="canvasLocation" x="5062.3188405797109" y="782.8125"/>
         </scene>
         <!--QuestanireViewController2-->
         <scene sceneID="Wv8-vO-OVX">
@@ -2013,7 +1998,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjl-jY-r7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3933" y="783"/>
+            <point key="canvasLocation" x="5752.1739130434789" y="782.8125"/>
         </scene>
         <!--QuestanireViewController3-->
         <scene sceneID="drg-Dt-Lsb">
@@ -2455,7 +2440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gk3-Wi-20p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4586" y="783"/>
+            <point key="canvasLocation" x="6405.7971014492759" y="782.8125"/>
         </scene>
         <!--QuestanireViewController4-->
         <scene sceneID="j74-6c-eZ6">
@@ -2884,7 +2869,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKx-C6-cDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5263.768115942029" y="918.75"/>
+            <point key="canvasLocation" x="7082.6086956521749" y="918.75"/>
         </scene>
     </scenes>
     <resources>

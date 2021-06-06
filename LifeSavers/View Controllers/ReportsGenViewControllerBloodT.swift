@@ -26,4 +26,9 @@ class ReportsGenViewControllerBloodT: UIViewController, ChartViewDelegate {
         
         ChartService.genChart(pieChart: pieChart, chartCategory: category)
     }
+    
+    
+    @IBAction func goHomeAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
