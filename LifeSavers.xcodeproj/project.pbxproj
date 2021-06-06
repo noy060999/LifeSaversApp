@@ -29,6 +29,9 @@
 		C0296C07266CC03000987ADD /* ReportsGenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0296C06266CC03000987ADD /* ReportsGenViewController.swift */; };
 		C02C34E42667DCB50094EB27 /* MyNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02C34E32667DCB50094EB27 /* MyNotificationService.swift */; };
 		C02C34E62667E49B0094EB27 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02C34E52667E49B0094EB27 /* FirebaseService.swift */; };
+		C09C56F0266CCAFD003510D0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09C56ED266CCA8D003510D0 /* Charts.framework */; };
+		C09C56F1266CCAFD003510D0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C09C56ED266CCA8D003510D0 /* Charts.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C09C56F4266CD306003510D0 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09C56F3266CD306003510D0 /* Donation.swift */; };
 		C0A06FC526511EC90098B6D5 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A06FC426511EC90098B6D5 /* Extenstions.swift */; };
 		C0AE8910264D44C700774DA3 /* QuastianireViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */; };
 		C0AE8912264D503D00774DA3 /* QusatianireViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */; };
@@ -36,6 +39,37 @@
 		C0B4F4C72652AA610051542E /* AddDoantePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4F4C62652AA610051542E /* AddDoantePopup.swift */; };
 		C0F987582652FDB5008E829C /* DonationHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F987572652FDB5008E829C /* DonationHistoryViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C09C56EC266CCA8D003510D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C09C56E7266CCA8D003510D0 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		C09C56EE266CCA8D003510D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C09C56E7266CCA8D003510D0 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C09C56F2266CCAFD003510D0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C09C56F1266CCAFD003510D0 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		21240C1A24B485AD00A24390 /* LifeSavers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeSavers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +97,8 @@
 		C02C34E32667DCB50094EB27 /* MyNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotificationService.swift; sourceTree = "<group>"; };
 		C02C34E52667E49B0094EB27 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		C089348E26428A3400599A2C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C09C56E7266CCA8D003510D0 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		C09C56F3266CD306003510D0 /* Donation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 		C0A06FC426511EC90098B6D5 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		C0AE890F264D44C700774DA3 /* QuastianireViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuastianireViewController2.swift; sourceTree = "<group>"; };
 		C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QusatianireViewController3.swift; sourceTree = "<group>"; };
@@ -78,6 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B769B125AB95F1C3C71B3B93 /* Pods_LifeSavers.framework in Frameworks */,
+				C09C56F0266CCAFD003510D0 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +124,7 @@
 		21240C1124B485AD00A24390 = {
 			isa = PBXGroup;
 			children = (
+				C09C56E7266CCA8D003510D0 /* Charts.xcodeproj */,
 				21240C4F24B4DDA700A24390 /* Default-568h@2x.png */,
 				21240C1C24B485AD00A24390 /* LifeSavers */,
 				21240C1B24B485AD00A24390 /* Products */,
@@ -147,6 +185,7 @@
 				21F93B7124B79DFF00BC5F47 /* Const.swift */,
 				217DB36B24B8F28F00E9751D /* Location.swift */,
 				C0A06FC426511EC90098B6D5 /* Extenstions.swift */,
+				C09C56F3266CD306003510D0 /* Donation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -178,6 +217,15 @@
 			path = PopupWindows;
 			sourceTree = "<group>";
 		};
+		C09C56E8266CCA8D003510D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C09C56ED266CCA8D003510D0 /* Charts.framework */,
+				C09C56EF266CCA8D003510D0 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CE2AEB83AD3032B340C0EF82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +246,7 @@
 				21240C1724B485AD00A24390 /* Frameworks */,
 				21240C1824B485AD00A24390 /* Resources */,
 				9A1DEAB1D2EA402AED28FAAB /* [CP] Embed Pods Frameworks */,
+				C09C56F2266CCAFD003510D0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,12 +283,35 @@
 			mainGroup = 21240C1124B485AD00A24390;
 			productRefGroup = 21240C1B24B485AD00A24390 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C09C56E8266CCA8D003510D0 /* Products */;
+					ProjectRef = C09C56E7266CCA8D003510D0 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				21240C1924B485AD00A24390 /* LifeSavers */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C09C56ED266CCA8D003510D0 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = C09C56EC266CCA8D003510D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C09C56EF266CCA8D003510D0 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = C09C56EE266CCA8D003510D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		21240C1824B485AD00A24390 /* Resources */ = {
@@ -317,6 +389,7 @@
 				C0F987582652FDB5008E829C /* DonationHistoryViewController.swift in Sources */,
 				C0AE8910264D44C700774DA3 /* QuastianireViewController2.swift in Sources */,
 				21240C2024B485AD00A24390 /* SceneDelegate.swift in Sources */,
+				C09C56F4266CD306003510D0 /* Donation.swift in Sources */,
 				C0AE8914264D5D8400774DA3 /* QusatianireViewController4.swift in Sources */,
 				C0B4F4C72652AA610051542E /* AddDoantePopup.swift in Sources */,
 				21240C4224B4AE0100A24390 /* HomeViewController.swift in Sources */,

@@ -14,6 +14,7 @@ class FirebaseService {
     static var allDoantionsStr : [String] = []
     static var allDatesStr : [String] = []
     static var allDates : [Date] = []
+    static var fullDonations: [Donation] = []
 
     static func getName(uid: String, completion: @escaping (_ name: String) -> Void){
         let db = Firestore.firestore()
@@ -49,6 +50,50 @@ class FirebaseService {
         }
     }
     
+    static func getArrByCategory (category: String, donations: [Donation], _ completion: @escaping (_ arr: [String]) -> Void){
+        var donateByCatergory : [String] = []
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        if (!donations.isEmpty)
+        {
+            switch (category){
+            case "city":
+                donateByCatergory.removeAll()
+                for donation in donations{
+                    donateByCatergory.append(donation.city)
+                }
+                break
+            case "bloodType":
+                donateByCatergory.removeAll()
+                for donation in donations{
+                    donateByCatergory.append(donation.bloodType)
+                }
+                break
+            case "gender":
+                donateByCatergory.removeAll()
+                for donation in donations{
+                    donateByCatergory.append(donation.gender)
+                }
+                break
+            case "date":
+                donateByCatergory.removeAll()
+                for donation in donations{
+                    donateByCatergory.append(dateFormatter.string(from: donation.date))
+                }
+                break
+            default:
+                donateByCatergory.removeAll()
+                for donation in donations{
+                    donateByCatergory.append(dateFormatter.string(from: donation.date))
+                }
+            }
+            completion(donateByCatergory)
+        }else{
+            print("no donations!")
+            completion([])
+        }
+    }
+    
     static func getDonationsArr (userAuthID : String, _ completion: @escaping (_ arr: [String]) -> Void){
         let db = Firestore.firestore()
         self.allDoantionsStr.removeAll()
@@ -67,6 +112,27 @@ class FirebaseService {
                 
             }
             completion(self.allDoantionsStr)
+        }
+    }
+    
+    static func countByCategories (fullDonationsByCategory: [String], _ completion: @escaping (_ counts: [String:Int]) -> Void){
+        let countedSet = NSCountedSet()
+        var counts : [String:Int] = [:]
+        for (value) in fullDonationsByCategory {
+            countedSet.add(value)
+        }
+        
+        for val in countedSet{
+            let count = countedSet.count(for: val)
+            print(countedSet.count(for: val))
+            counts[val as! String] = count
+        }
+        
+        if (counts.count > 0){
+            completion(counts)
+        }
+        else {
+            completion([:])
         }
     }
     
@@ -94,6 +160,41 @@ class FirebaseService {
             }
             else {
                 completion("")
+            }
+        }
+    }
+    
+    static func getFullDonationsFromAllUsers (_ completion: @escaping (_ arr: [Donation]) -> Void){
+        let db = Firestore.firestore()
+        self.fullDonations.removeAll()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        db.collection("users").getDocuments() {querySnapshot,err in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    self.allDonations.removeAll()
+                    self.allDonations = document["donations"] as? Array ?? []
+                    for donate in self.allDonations {
+                        let cityDate = donate.split(separator: ",")
+                        let cityPart = cityDate[0].split(separator: ":")
+                        let city = cityPart[1].trimmingCharacters(in: .whitespacesAndNewlines)
+                        let datePart = cityDate[1].split(separator: ":")
+                        let dateStr = datePart[1].trimmingCharacters(in: .whitespacesAndNewlines)
+                        let date = dateFormatter.date(from: dateStr)
+                        let gender = document["gender"] as? String
+                        let bloodType = document["bloodType"] as? String
+                        let donation = Donation(city: city, bloodT: bloodType!, gender: gender!, date: date!)
+                        self.fullDonations.append(donation)
+                    }
+                }
+                if (self.fullDonations.count > 0){
+                    completion(self.fullDonations)
+                }
+                else {
+                    completion([])
+                }
             }
         }
     }
