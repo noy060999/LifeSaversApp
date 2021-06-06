@@ -1001,6 +1001,111 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
+        <!--ReportsGenViewController-->
+        <scene sceneID="llg-bV-p5p">
+            <objects>
+                <viewController storyboardIdentifier="reportsVC" id="sNd-bC-Nh4" userLabel="ReportsGenViewController" customClass="ReportsGenViewController" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PWt-Bq-8tq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mzY-di-xXY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8K-5C-X2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495" y="872"/>
+        </scene>
+        <!--AdminViewController-->
+        <scene sceneID="F9C-pm-Wgt">
+            <objects>
+                <viewController storyboardIdentifier="adminVC" id="E9O-Ii-g2f" userLabel="AdminViewController" customClass="AdminViewController" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yWW-IA-hPv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMZ-7l-PrO">
+                                <rect key="frame" x="30" y="54" width="84" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="התנתק" image="person.crop.circle.fill.badge.minus" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutAction:" destination="E9O-Ii-g2f" eventType="touchUpInside" id="nYs-kc-xcr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="היי שם משתמש !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khr-UZ-te2">
+                                <rect key="frame" x="73" y="164" width="268.5" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5Y-ol-yQn">
+                                <rect key="frame" x="87" y="210" width="240" height="602"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bL-i9-eb3" userLabel="btn">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FI-sD-HLF">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="rEP-XF-QCC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="report-icon"/>
+                                        <connections>
+                                            <action selector="gotoReportsAction:" destination="E9O-Ii-g2f" eventType="touchUpInside" id="VzC-Sj-EIB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4FI-sD-HLF" secondAttribute="bottom" id="Ibr-Tj-q7m"/>
+                                    <constraint firstAttribute="width" constant="200" id="UGu-O4-V4u"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Wed-Kh-uh5"/>
+                                    <constraint firstAttribute="trailing" secondItem="4FI-sD-HLF" secondAttribute="trailing" id="XXf-h5-pbm"/>
+                                    <constraint firstItem="4FI-sD-HLF" firstAttribute="leading" secondItem="0bL-i9-eb3" secondAttribute="leading" id="gda-LG-sLz"/>
+                                    <constraint firstItem="4FI-sD-HLF" firstAttribute="top" secondItem="0bL-i9-eb3" secondAttribute="top" id="kIL-fM-pUE"/>
+                                    <constraint firstAttribute="height" constant="200" id="mOD-um-W5R"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="sWO-xC-4Fk"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הפקת דוחות" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRy-sU-9Dg">
+                                <rect key="frame" x="100" y="558" width="214" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6MY-3j-gJg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NMZ-7l-PrO" firstAttribute="leading" secondItem="6MY-3j-gJg" secondAttribute="leading" constant="30" id="1u7-fa-C2G"/>
+                            <constraint firstItem="r5Y-ol-yQn" firstAttribute="top" secondItem="6MY-3j-gJg" secondAttribute="top" constant="166" id="5yt-Dm-z3S"/>
+                            <constraint firstItem="Khr-UZ-te2" firstAttribute="top" secondItem="6MY-3j-gJg" secondAttribute="top" constant="120" id="IGf-uC-bgO"/>
+                            <constraint firstItem="Khr-UZ-te2" firstAttribute="centerX" secondItem="yWW-IA-hPv" secondAttribute="centerX" id="O1Z-jE-73R"/>
+                            <constraint firstItem="0bL-i9-eb3" firstAttribute="centerY" secondItem="yWW-IA-hPv" secondAttribute="centerY" id="T5x-rj-DtM"/>
+                            <constraint firstItem="0bL-i9-eb3" firstAttribute="centerX" secondItem="yWW-IA-hPv" secondAttribute="centerX" id="Vnc-tt-7SM"/>
+                            <constraint firstItem="xRy-sU-9Dg" firstAttribute="top" secondItem="0bL-i9-eb3" secondAttribute="bottom" constant="10" id="Vtg-iE-Cxj"/>
+                            <constraint firstItem="6MY-3j-gJg" firstAttribute="bottom" secondItem="r5Y-ol-yQn" secondAttribute="bottom" constant="50" id="alJ-UK-7lc"/>
+                            <constraint firstItem="6MY-3j-gJg" firstAttribute="trailing" secondItem="xRy-sU-9Dg" secondAttribute="trailing" constant="100" id="ftQ-zq-9af"/>
+                            <constraint firstItem="r5Y-ol-yQn" firstAttribute="leading" secondItem="6MY-3j-gJg" secondAttribute="leading" constant="87" id="tP9-yh-gWy"/>
+                            <constraint firstItem="NMZ-7l-PrO" firstAttribute="top" secondItem="6MY-3j-gJg" secondAttribute="top" constant="10" id="wgD-PH-VSa"/>
+                            <constraint firstItem="r5Y-ol-yQn" firstAttribute="centerX" secondItem="0bL-i9-eb3" secondAttribute="centerX" id="wkH-2M-rJl"/>
+                            <constraint firstItem="xRy-sU-9Dg" firstAttribute="leading" secondItem="6MY-3j-gJg" secondAttribute="leading" constant="100" id="zTA-7N-431"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gotoReportsBtn" destination="4FI-sD-HLF" id="vHm-NU-Fwq"/>
+                        <outlet property="helloLabelAdmin" destination="Khr-UZ-te2" id="oQx-7I-W1A"/>
+                        <outlet property="logoutBtn" destination="NMZ-7l-PrO" id="3jm-Yv-5Rj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tns-Hm-Je1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.73913043478262" y="855.80357142857144"/>
+        </scene>
         <!--QuestanireViewController1-->
         <scene sceneID="2lh-FM-4F8">
             <objects>
@@ -2616,6 +2721,7 @@
         <image name="person.crop.circle.fill.badge.minus" catalog="system" width="128" height="113"/>
         <image name="plus.square.on.square" catalog="system" width="128" height="113"/>
         <image name="profile-red" width="512" height="512"/>
+        <image name="report-icon" width="488" height="511"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

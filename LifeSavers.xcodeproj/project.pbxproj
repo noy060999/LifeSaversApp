@@ -25,6 +25,8 @@
 		21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F93B7124B79DFF00BC5F47 /* Const.swift */; };
 		B769B125AB95F1C3C71B3B93 /* Pods_LifeSavers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */; };
 		C017CDA22646B43000325847 /* PopupWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017CDA12646B43000325847 /* PopupWindow.swift */; };
+		C0296C05266CAF3200987ADD /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0296C04266CAF3200987ADD /* AdminViewController.swift */; };
+		C0296C07266CC03000987ADD /* ReportsGenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0296C06266CC03000987ADD /* ReportsGenViewController.swift */; };
 		C02C34E42667DCB50094EB27 /* MyNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02C34E32667DCB50094EB27 /* MyNotificationService.swift */; };
 		C02C34E62667E49B0094EB27 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02C34E52667E49B0094EB27 /* FirebaseService.swift */; };
 		C0A06FC526511EC90098B6D5 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A06FC426511EC90098B6D5 /* Extenstions.swift */; };
@@ -56,6 +58,8 @@
 		9927C8226602CD0E68DD6ECE /* Pods_LifeSavers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSavers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1502CC200DEC5190A156C6B /* Pods-LifeSavers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSavers.release.xcconfig"; path = "Target Support Files/Pods-LifeSavers/Pods-LifeSavers.release.xcconfig"; sourceTree = "<group>"; };
 		C017CDA12646B43000325847 /* PopupWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupWindow.swift; sourceTree = "<group>"; };
+		C0296C04266CAF3200987ADD /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		C0296C06266CC03000987ADD /* ReportsGenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsGenViewController.swift; sourceTree = "<group>"; };
 		C02C34E32667DCB50094EB27 /* MyNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotificationService.swift; sourceTree = "<group>"; };
 		C02C34E52667E49B0094EB27 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		C089348E26428A3400599A2C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				C0AE8911264D503D00774DA3 /* QusatianireViewController3.swift */,
 				C0AE8913264D5D8400774DA3 /* QusatianireViewController4.swift */,
 				C0F987572652FDB5008E829C /* DonationHistoryViewController.swift */,
+				C0296C06266CC03000987ADD /* ReportsGenViewController.swift */,
+				C0296C04266CAF3200987ADD /* AdminViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02C34E42667DCB50094EB27 /* MyNotificationService.swift in Sources */,
+				C0296C07266CC03000987ADD /* ReportsGenViewController.swift in Sources */,
 				C0A06FC526511EC90098B6D5 /* Extenstions.swift in Sources */,
 				21240C3A24B4A95200A24390 /* SignInViewController.swift in Sources */,
 				21240C4424B4B27800A24390 /* ActivePositionsViewController.swift in Sources */,
@@ -315,6 +322,7 @@
 				21240C4224B4AE0100A24390 /* HomeViewController.swift in Sources */,
 				21240C3C24B4A96700A24390 /* SignUpViewController.swift in Sources */,
 				217DB36C24B8F28F00E9751D /* Location.swift in Sources */,
+				C0296C05266CAF3200987ADD /* AdminViewController.swift in Sources */,
 				C0AE8912264D503D00774DA3 /* QusatianireViewController3.swift in Sources */,
 				21F93B7224B79DFF00BC5F47 /* Const.swift in Sources */,
 			);

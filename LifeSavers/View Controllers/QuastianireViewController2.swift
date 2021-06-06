@@ -12,8 +12,8 @@ class QusatianireViewController2: UIViewController {
     @IBOutlet weak var stage2Q1_segmented: UISegmentedControl!
     @IBOutlet weak var stage2Q2_segmented: UISegmentedControl!
     @IBOutlet weak var stage2Q3_segmented: UISegmentedControl!
-
-
+    
+    
     @IBOutlet weak var backBtnPage2: UIButton!
     @IBOutlet weak var gotoPage3Btn: UIButton!
     @IBOutlet weak var gotoPage1Btn: UIButton!
@@ -26,20 +26,22 @@ class QusatianireViewController2: UIViewController {
         view.addGestureRecognizer(tap)
         
     }
-
-
-
-
-@IBAction func gotoPage3Action(_ sender: Any) {
-    let donationCanBeUsed = getUserAnswers()
-    let quastianirePage3VC = storyboard?.instantiateViewController(identifier: Const.Storyboard.quastianireViewController3) as? QusatianireViewController3
-    navigationController?.pushViewController(quastianirePage3VC!, animated: true)
     
-}
-@IBAction func gotoPage1Action(_ sender: Any) {
-    navigationController?.popViewController(animated: true)
     
-}
+    
+    
+    @IBAction func gotoPage3Action(_ sender: Any) {
+        let donationCanBeUsed = getUserAnswers()
+        let quastianirePage3VC = storyboard?.instantiateViewController(identifier: Const.Storyboard.quastianireViewController3) as? QusatianireViewController3
+        navigationController?.pushViewController(quastianirePage3VC!, animated: true)
+        
+        
+        
+    }
+    @IBAction func gotoPage1Action(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        
+    }
     
     @IBAction func goBackPage2Action(_ sender: Any) {
         let homePageVC = storyboard?.instantiateViewController(identifier: Const.Storyboard.homeViewController) as? HomeViewController

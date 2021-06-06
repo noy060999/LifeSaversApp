@@ -62,6 +62,12 @@ class SignInViewController: UIViewController {
         
     }
     
+    func goToAdminVC () {
+        let adminViewController = storyboard?.instantiateViewController(identifier: Const.Storyboard.adminViewController) as? AdminViewController
+        navigationController?.pushViewController(adminViewController!, animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     //get user parameters from text fields
     func getParameters(){
         userEmail = signInVC_email_edt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -104,7 +110,11 @@ class SignInViewController: UIViewController {
                     self.showError(msg)
                 }
                 else {
-                    self.gotoHome()
+                    if (self.userEmail == "noy.admin@gmail.com"){
+                        self.goToAdminVC()
+                    }else{
+                        self.gotoHome()
+                    }
                 }
             }
         }

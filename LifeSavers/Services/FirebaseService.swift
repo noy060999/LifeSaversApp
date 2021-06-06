@@ -86,7 +86,7 @@ class FirebaseService {
                     self.allDates.append(dateFormatter.date(from: date)!)
                 }
             }
-            if (self.allDates.count >= 0){
+            if (self.allDates.count > 0){
                 let mostRecentDate = self.allDates.max(by: {
                    $0.timeIntervalSinceReferenceDate < $1.timeIntervalSinceReferenceDate
                 })

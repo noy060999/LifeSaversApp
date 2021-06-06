@@ -79,7 +79,7 @@ class SignUpViewController: UIViewController {
     func checkGender (genderIndex: Int)-> String{
         switch (genderIndex){
         case 0:
-            return "Man"
+            return "זכר"
         case 1:
             return "נקבה"
         default:
@@ -121,6 +121,11 @@ class SignUpViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func goToAdminVC () {
+        let adminViewController = storyboard?.instantiateViewController(identifier: Const.Storyboard.adminViewController) as? AdminViewController
+        navigationController?.pushViewController(adminViewController!, animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
     func showError(_ message:String) {
         
         errorLabel.text = message
@@ -204,7 +209,11 @@ class SignUpViewController: UIViewController {
                     let docRef = db.collection("users").document(Auth.auth().currentUser!.uid)
                     docRef.setData(["firstName":self.userName, "familyName": self.userFamilyName, "id":self.userID,  "phone":self.userPhone, "gender":self.userGender, "birthDate": self.userBirthdateString,"bloodType": self.userBloodType, "rememberMe": true])
                     
-                    self.gotoHome()
+                    if (self.userEmail == "noy.admin@gmail.com"){
+                        self.goToAdminVC()
+                    }else{
+                        self.gotoHome()
+                    }                    
                 }
             }
         }
