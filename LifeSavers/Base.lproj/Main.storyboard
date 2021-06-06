@@ -1001,27 +1001,198 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
-        <!--ReportsGenViewController-->
-        <scene sceneID="llg-bV-p5p">
+        <!--Tab Bar Controller-->
+        <scene sceneID="c0w-cH-5eD">
             <objects>
-                <viewController storyboardIdentifier="reportsVC" id="sNd-bC-Nh4" userLabel="ReportsGenViewController" customClass="ReportsGenViewController" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PWt-Bq-8tq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <tabBarController storyboardIdentifier="tabBarController" id="bOB-yC-vjw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JCX-Vy-RB5"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iS7-bT-Lx2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9Hx-If-UWj" kind="relationship" relationship="viewControllers" id="D7M-wE-5A4"/>
+                        <segue destination="9gy-i4-mbl" kind="relationship" relationship="viewControllers" id="yqq-5D-jFb"/>
+                        <segue destination="6in-TF-zBw" kind="relationship" relationship="viewControllers" id="6yl-dm-JPT"/>
+                        <segue destination="EpR-qe-bKX" kind="relationship" relationship="viewControllers" id="O0W-wo-Hoy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shr-qn-M6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-707" y="638"/>
+        </scene>
+        <!--התפלגות תרומות לפי עיר-->
+        <scene sceneID="J7V-e1-Gkw">
+            <objects>
+                <viewController storyboardIdentifier="genByCityVC" id="t1T-v8-ytY" customClass="ReportsGenViewControllerCity" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Xv-uH-IrW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-rM-AxO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fz7-Zb-gmu">
+                                <rect key="frame" x="30" y="71" width="78" height="22"/>
+                                <state key="normal" title="Button" image="house.fill" catalog="system"/>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="mzY-di-xXY"/>
+                        <viewLayoutGuide key="safeArea" id="U8j-IK-OCh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fz7-Zb-gmu" firstAttribute="leading" secondItem="U8j-IK-OCh" secondAttribute="leading" constant="30" id="UTX-Ul-Qjm"/>
+                            <constraint firstItem="fz7-Zb-gmu" firstAttribute="top" secondItem="U8j-IK-OCh" secondAttribute="top" constant="15" id="gOn-xL-sEC"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="התפלגות תרומות לפי עיר" id="HQr-rS-W2q"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O8K-5C-X2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0k-Ip-CW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-495.6521739130435" y="871.875"/>
+            <point key="canvasLocation" x="-3626" y="943"/>
+        </scene>
+        <!--התפלגות תרומות לפי מין-->
+        <scene sceneID="9S0-yp-F9Q">
+            <objects>
+                <viewController storyboardIdentifier="genByGenderVC" id="v72-WR-h4C" customClass="ReportsGenViewControllerGender" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WFk-jK-u33">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZe-FW-NCD">
+                                <rect key="frame" x="30" y="71" width="78" height="22"/>
+                                <state key="normal" title="Button" image="house.fill" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Fd-ab-Mnt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dZe-FW-NCD" firstAttribute="top" secondItem="6Fd-ab-Mnt" secondAttribute="top" constant="15" id="P81-qs-b2t"/>
+                            <constraint firstItem="dZe-FW-NCD" firstAttribute="leading" secondItem="6Fd-ab-Mnt" secondAttribute="leading" constant="30" id="Xvg-Js-CFO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="התפלגות תרומות לפי מין" id="CzP-cd-pFR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5C-TD-zdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2971" y="943"/>
+        </scene>
+        <!--התפלגות תרומות לפי תאריך-->
+        <scene sceneID="l8L-S3-hmk">
+            <objects>
+                <viewController storyboardIdentifier="genByDateVC" id="8W1-P0-hoL" customClass="ReportsGenViewControllerDate" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C31-hm-X9o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnd-1k-bbT">
+                                <rect key="frame" x="30" y="71" width="78" height="22"/>
+                                <state key="normal" title="Button" image="house.fill" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZM9-rj-a9K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dnd-1k-bbT" firstAttribute="leading" secondItem="ZM9-rj-a9K" secondAttribute="leading" constant="30" id="oL6-WP-RkO"/>
+                            <constraint firstItem="dnd-1k-bbT" firstAttribute="top" secondItem="ZM9-rj-a9K" secondAttribute="top" constant="15" id="qVp-3E-3Sw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="התפלגות תרומות לפי תאריך" id="odK-P7-eSN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81Y-ec-1wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2316" y="943"/>
+        </scene>
+        <!--התפלגות תרומות לפי סוג דם-->
+        <scene sceneID="dj6-zc-MIz">
+            <objects>
+                <viewController storyboardIdentifier="genByBloodtypeVC" id="cLX-6I-CmR" customClass="ReportsGenViewControllerBloodT" customModule="LifeSavers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rKg-Uf-WIX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgR-hR-x30">
+                                <rect key="frame" x="30" y="71" width="78" height="22"/>
+                                <state key="normal" title="Button" image="house.fill" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gf2-qj-Gcv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rgR-hR-x30" firstAttribute="top" secondItem="Gf2-qj-Gcv" secondAttribute="top" constant="15" id="429-Dg-YfT"/>
+                            <constraint firstItem="rgR-hR-x30" firstAttribute="leading" secondItem="Gf2-qj-Gcv" secondAttribute="leading" constant="30" id="mlz-do-wb2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="התפלגות תרומות לפי סוג דם" id="bLn-rI-o3t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViG-jD-8El" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1607" y="955"/>
+        </scene>
+        <!--תאריך-->
+        <scene sceneID="MCA-J2-lJc">
+            <objects>
+                <navigationController id="6in-TF-zBw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="תאריך" id="XZ2-0e-2eb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rEp-yC-hmB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8W1-P0-hoL" kind="relationship" relationship="rootViewController" id="04T-dU-spy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WtM-FS-PXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2316" y="305"/>
+        </scene>
+        <!--מין-->
+        <scene sceneID="abt-ZG-65M">
+            <objects>
+                <navigationController id="9gy-i4-mbl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="מין" id="ozm-dD-oP5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gsc-8y-SDy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="v72-WR-h4C" kind="relationship" relationship="rootViewController" id="cGR-yQ-EP7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hxu-NA-VmL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2971" y="305"/>
+        </scene>
+        <!--עיר-->
+        <scene sceneID="cCa-Ck-oSd">
+            <objects>
+                <navigationController id="9Hx-If-UWj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="עיר" id="O63-r5-iNV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qYt-AK-bMf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t1T-v8-ytY" kind="relationship" relationship="rootViewController" id="dit-k0-rmD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPe-xg-zNf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3623" y="305"/>
+        </scene>
+        <!--סוג דם-->
+        <scene sceneID="uLO-lk-RNi">
+            <objects>
+                <navigationController id="EpR-qe-bKX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="סוג דם" id="gMj-Sj-DWb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRc-W3-cNP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cLX-6I-CmR" kind="relationship" relationship="rootViewController" id="7Cx-cK-fbT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Bs-Rd-Vsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1607" y="304"/>
         </scene>
         <!--AdminViewController-->
         <scene sceneID="F9C-pm-Wgt">
@@ -1062,7 +1233,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="report-icon"/>
                                         <connections>
-                                            <action selector="gotoReportsAction:" destination="E9O-Ii-g2f" eventType="touchUpInside" id="VzC-Sj-EIB"/>
+                                            <segue destination="bOB-yC-vjw" kind="show" id="oMc-jo-mxj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1103,6 +1274,7 @@
                             <constraint firstItem="xRy-sU-9Dg" firstAttribute="leading" secondItem="6MY-3j-gJg" secondAttribute="leading" constant="100" id="zTA-7N-431"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ibv-zv-ssd"/>
                     <connections>
                         <outlet property="gotoReportsBtn" destination="4FI-sD-HLF" id="vHm-NU-Fwq"/>
                         <outlet property="helloLabelAdmin" destination="Khr-UZ-te2" id="oQx-7I-W1A"/>

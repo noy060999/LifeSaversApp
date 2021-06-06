@@ -53,7 +53,7 @@ class FirebaseService {
     static func getArrByCategory (category: String, donations: [Donation], _ completion: @escaping (_ arr: [String]) -> Void){
         var donateByCatergory : [String] = []
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "dd-MM-yy"
         if (!donations.isEmpty)
         {
             switch (category){
