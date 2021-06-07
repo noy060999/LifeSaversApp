@@ -12,7 +12,6 @@ import UserNotifications
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var logoutBtn: UIButton!
-    @IBOutlet weak var homeVC_hello_lbl: UILabel!
     @IBOutlet weak var homeVC_fillQ_btn: UIButton!
     @IBOutlet weak var homeVC_profile_btn: UIButton!
     @IBOutlet weak var homeVC_activePositions_btn: UIButton!
@@ -25,12 +24,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         let uid = (Auth.auth().currentUser?.uid)!
         
-        //set name
-        FirebaseService.getName(uid: uid) { name in
-            if (name != "error"){
-                self.homeVC_hello_lbl.text = "היי \(String(describing: name))!"
-            }
-        }
         
         //set user notifications
         MyNotificationService.askPermissions { granted in
