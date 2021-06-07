@@ -14,9 +14,9 @@ class ChartService{
         var entries = [PieChartDataEntry]()
         entries.removeAll()
         FirebaseService.getFullDonationsFromAllUsers() { fullDonations in
-            for don in fullDonations {
+            /*for don in fullDonations {
                 print(don.description)
-            }
+            }*/
             if (!fullDonations.isEmpty){
                 FirebaseService.getArrByCategory(category: chartCategory, donations: fullDonations) { donationsByCategory in
                     if (donationsByCategory != []){
